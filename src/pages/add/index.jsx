@@ -13,7 +13,7 @@ import {
 const Add = () => {
   const dispatch = useAppDispatch();
   const count = useAppSelector(selectCount);
-  const [incrementAmount, setIncrementAmount] = useState<number>(0);
+  const [incrementAmount, setIncrementAmount] = useState(0);
 
   return (
     <>
