@@ -6,7 +6,7 @@ import prismadb from '../../libs/prismadb';
 import { getAuth   } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 import { Order } from '@prisma/client';
-import { generateAccount, generateTronAccount } from '@/utils/AccountUtils';
+import { generateAccount, generateTronAccount } from '../../utils/AccountUtils';
 
 export default async function handler(req, res) {
     

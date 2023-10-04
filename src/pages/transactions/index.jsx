@@ -1,4 +1,4 @@
-import TransactionView from '@/views/TransactionView'
+import TransactionView from '../../views/TransactionView'
 import React from 'react'
 
 const Transactions = () => {

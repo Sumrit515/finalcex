@@ -1,5 +1,5 @@
 import React from 'react'
-import RegisterView from '@/views/RegisterView'
+import RegisterView from '../../views/RegisterView'
 
 const Register = () => {
   return (

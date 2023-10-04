@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ScreenerTable from '@/views/ScreenerTable'
+import ScreenerTable from '../../ScreenerTable'
 
 const PairList = () => {
 

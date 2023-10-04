@@ -5,7 +5,7 @@ import Image from 'next/image'
 import {motion} from 'framer-motion'
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { slideIn } from "@/utils/motion";
+import { slideIn } from "../../utils/motion";
  
 export default function Page() {
 

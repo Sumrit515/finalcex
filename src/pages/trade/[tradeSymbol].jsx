@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import TradingView from '@/views/TradeView'
+import TradingView from '../../views/TradeView'
 import { NextPageContext } from 'next'
 import { getSession } from 'next-auth/react'
 import { redirect } from 'next/dist/server/api-utils'

@@ -7,17 +7,14 @@ import axios from 'axios';
 import { TransferFundsModal } from '../../../components/modals/TransferFunds';
 import toast from 'react-hot-toast';
 
-// interface CryptoCurrencyListProps {
-//     symbol: string;
-//     value: string;
-//     src: string;
-// }
 
 const CryptoCurrencyList = ({
 symbol,
 value,
 src
-}) => {
+}) => 
+
+{
 
     const { data, error, isLoading } = useQuery('gets', useFetchCryptoBalance, {
         refetchInterval: 3000, // 10 seconds in milliseconds
@@ -72,65 +69,6 @@ useEffect(() => {
 
   return (
 <>
-<TransferFundsModal
-isOpen={isOpen}
-amount={amount}
-setAmount={setAmount}
-onClose={() => setIsOpen(false)}
-onSubmit={() => transferToTradingWallet(amount)}
-currency={symbol}
-wallet='Trading'
-/>
-
-<div className='
-    flex
-    flex-row
-    items-center
-    w-full
-    gap-8
-    '>
-
-<Image
-            src={src}
-            alt={src}
-            width={100}
-            height={100}
-            className='
-            w-8
-            h-8
-            '
-            />
-
-        <div className='
-        flex
-        flex-row
-        gap-8
-        w-full
-       justify-between
-        items-center 
-        '>
-          
-          <div className='
-          font-semibold
-          '>
-            {symbol} :
-            </div>
-            <div>
-                {(Number(activeBalance)/10 ** 18).toFixed(5)}
-                </div>
-                
-            </div>
-            <div>
-                    <Button
-                    onClick={() => setIsOpen(true)}
-                    className='
-                    w-[200px]
-                    '
-                    >
-                        Transfer to Trading Wallet
-                    </Button>
-                    </div>
-    </div>
 
 </>
    
