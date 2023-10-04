@@ -260,11 +260,11 @@ const index = () => {
     <>
     <div 
     className="
-    flex
-    flex-row
-    gap-2
-    justify-center
-    items-center
+    md:flex
+    md:flex-row
+    md:gap-2
+    md:justify-center
+    md:items-center
     p-4
     "
 
@@ -273,7 +273,7 @@ const index = () => {
     <div
     className="
   flex
-  flex-1
+  md:flex-1
   rounded-xl
   border-slate-500
   border-[1px]
@@ -443,7 +443,9 @@ const index = () => {
 
   
   <div className="
-  flex-1
+  md:flex-1
+  md:block
+  hidden
   ">
 <Image
 src={"/images/depositFunds.gif"}
