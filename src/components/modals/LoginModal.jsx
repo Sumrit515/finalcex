@@ -16,6 +16,7 @@ import useRegisterModal from '../../hooks/useRegistermodal'
 import { useRouter } from 'next/navigation'
 
 const LoginModal = () => {
+    
     const router = useRouter()
     const loginModal = useLoginModal()
     const registerModal = useRegisterModal()
