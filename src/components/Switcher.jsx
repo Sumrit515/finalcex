@@ -54,7 +54,15 @@ setValue
 }) => {
 
   const [open, setOpen] = React.useState(false)
-
+const getLabel = (item, value) => {
+  const result = item.find((item) => item.value === value)
+  if(result)
+{
+    console.log(result)
+  return result.label
+}
+return ""
+}
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -66,7 +74,7 @@ setValue
           className="w-[200px] justify-between"
         >
           {value
-            ? items?.find((item) => item?.value === value)?.label
+            ? getLabel(items, value)
             : "Select..."}
           <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </Button>
@@ -76,7 +84,7 @@ setValue
           <CommandInput placeholder="Search ..." className="h-9" />
           <CommandEmpty>No result.</CommandEmpty>
           <CommandGroup>
-            {items?.map((item) => (
+            {items.map((item) => (
               <CommandItem
                 key={item.value}
                 onSelect={(currentValue) => {

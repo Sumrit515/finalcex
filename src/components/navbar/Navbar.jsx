@@ -14,6 +14,7 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard', current: false },
   { name: 'Deposit', href: '/deposit', current: false },
   { name: 'Withdraw', href: '/withdraw', current: false },
+
 ]
 
 function classNames(...classes) {

@@ -70,6 +70,10 @@ mr-8
         title="Withdraw"
         link="withdraw"
         />
+        <Categories
+        title="Withdraw"
+        link="withdraw"
+        />
      
     
         
