@@ -1,0 +1,2741 @@
+[
+    {
+    "symbol" : "1inch",
+    "name" : "1inch",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "aave",
+    "name" : "Aave",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+    
+},
+    {
+    "symbol" : "aca",
+    "name" : "Acala Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ach",
+    "name" : "Alchemy Pay",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "acm",
+    "name" : "AC Milan Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ada",
+    "name" : "Cardano",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "adx",
+    "name" : "Ambire AdEx",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "aergo",
+    "name" : "Aergo",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "agix",
+    "name" : "SingularityNET Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "agld",
+    "name" : "Adventure Gold",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "akro",
+    "name" : "Akropolis",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "alcx",
+    "name" : "Alchemix",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "algo",
+    "name" : "Algorand",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "alice",
+    "name" : "My Neighbor Alice",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "alpaca",
+    "name" : "Alpace Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "alpha",
+    "name" : "Stella",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "alpine",
+    "name" : "Alpine F1 Team Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "amb",
+    "name" : "AirDAO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "amp",
+    "name" : "AMP",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ankr",
+    "name" : "Ankr",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ant",
+    "name" : "Aragon",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ape",
+    "name" : "ApeCoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "api3",
+    "name" : "API3",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "apt",
+    "name" : "Aptos",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ar",
+    "name" : "Arweave",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "arb",
+    "name" : "arbitrum",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ardr",
+    "name" : "Ardor",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ark",
+    "name" : "Ark",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "arpa",
+    "name" : "ARPA Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "asr",
+    "name" : "AS Roma Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ast",
+    "name" : "AirSwap",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "astr",
+    "name" : "Astar",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ata",
+    "name" : "Automata",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "atm",
+    "name" : "Atlético de Madrid Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "atom",
+    "name" : "Cosmos",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "auction",
+    "name" : "Auction",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "audio",
+    "name" : "Audius",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "ava",
+    "name" : "Travala.com",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"  
+},
+    {
+    "symbol" : "avax",
+    "name" : "Avalanche",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "axs",
+    "name" : "Axie Infinity",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "badger",
+    "name" : "Badger DAO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bake",
+    "name" : "BakeryToken",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bal",
+    "name" : "Balancer",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "band",
+    "name" : "BAND",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bar",
+    "name" : "FC Barcelona Fan Token BAR",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bat",
+    "name" : "Basic Attention Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bch",
+    "name" : "Bitcoin Cash",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bel",
+    "name" : "Bella Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "beta",
+    "name" : "Beta Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "beth",
+    "name" : "BETH",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bico",
+    "name" : "Biconomy",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bidr",
+    "name" : "BIDR",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "bifi",
+    "name" : "Beefy.Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+    {
+    "symbol" : "blz",
+    "name" : "Bluzelle",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+} ,
+   {
+    "symbol" : "bifi",
+    "name" : "Beefy.Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "bnb",
+    "name" : "BNB",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "bnt",
+    "name" : "Bancor",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "bnx",
+    "name" : "BinaryX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "bond",
+    "name" : "BarnBridge",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "bsw",
+    "name" : "Biswap",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "btc",
+    "name" : "Bitcoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "bts",
+    "name" : "BitShares",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "bttc",
+    "name" : "BitTorrent",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "burger",
+    "name" : "BurgerCities",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "busd",
+    "name" : "BUSD",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "c98",
+    "name" : "Coin98",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "celo",
+    "name" : "Celo",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "celr",
+    "name" : "Celer Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "cfx",
+    "name" : "Conflux Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "chess",
+    "name" : "Tranchess",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "chr",
+    "name" : "chromia",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "city",
+    "name" : "Manchester City Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "ckb",
+    "name" : "CKB",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "clv",
+    "name" : "Clover Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "combo",
+    "name" : "COMBO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "comp",
+    "name" : "Compound",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "cos",
+    "name" : "Contentos",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "coti",
+    "name" : "COTI",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "cream",
+    "name" : "Cream Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "crv",
+    "name" : "Curve",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+   {
+    "symbol" : "ctk",
+    "name" : "Shentu",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+{
+    "symbol" : "ctsi",
+    "name" : "Cartesi",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ctxc",
+    "name" : "Cortex",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "cvc",
+    "name" : "Civic",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "cvp",
+    "name" : "PowerPool",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "cvx",
+    "name" : "Convex Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dai",
+    "name" : "DAI",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dar",
+    "name" : "Mines of Dalarnia",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dash",
+    "name" : "Dash",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "data",
+    "name" : "Streamr",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dcr",
+    "name" : "Decred",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dego",
+    "name" : "Dego Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dent",
+    "name" : "DENT",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dexe",
+    "name" : "DeXe",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ddf",
+    "name" : "dForce",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dgb",
+    "name" : "DigiByte",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dia",
+    "name" : "DIA",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dock",
+    "name" : "DOCK",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dodo",
+    "name" : "DODO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "doge",
+    "name" : "Dogecoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dot",
+    "name" : "Polkadot",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "drep",
+    "name" : "DREP",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dusk",
+    "name" : "Dusk Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "dydx",
+    "name" : "dYdX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "edu",
+    "name" : "Open Campus",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "egld",
+    "name" : "MultiversX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "elf",
+    "name" : "aelf",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "enj",
+    "name" : "Enjin Coin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ens",
+    "name" : "Ethereum symbol Service",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "eos",
+    "name" : "EOS",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "epx",
+    "name" : "Ellipsis",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ern",
+    "name" : "Ethernity Chain",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "etc",
+    "name" : "Ethereum Classic",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "eth",
+    "name" : "Ethereum",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "farm",
+    "name" : "Harvest Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "fet",
+    "name" : "Fetch.ai",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "fida",
+    "name" : "Bonfida",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "fil",
+    "name" : "Filecoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "fio",
+    "name" : "FIO Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "firo",
+    "name" : "Firo",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "fis",
+    "name" : "Stafi",
+       "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "flm",
+    "name" : "Flamingo",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "floki",
+    "name" : "FLOKI",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "flow",
+    "name" : "FLOW",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "flux",
+    "name" : "Flux",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "for",
+    "name" : "ForTube",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "forth",
+    "name" : "Ampleforth Governance Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "front",
+    "name" : "Frontier",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ftm",
+    "name" : "Fantom",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ftt",
+    "name" : "FTX Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "fun",
+    "name" : "FunToken",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "fxs",
+    "name" : "Frax Share",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gal",
+    "name" : "Galxe",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gala",
+    "name" : "Gala",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gas",
+    "name" : "NeoGas",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gft",
+    "name" : "Gifto",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ghst",
+    "name" : "Aavegotchi",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "glm",
+    "name" : "Golem",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "glmr",
+    "name" : "Glimmer",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gmt",
+    "name" : "Green Metaverse Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gmx",
+    "name" : "GMX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gns",
+    "name" : "Gains Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "grt",
+    "name" : "The Graph",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "gtc",
+    "name" : "Gitcoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "hard",
+    "name" : "Kava Lend",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "hbar",
+    "name" : "Hedera Hashgraph",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "hft",
+    "name" : "Hashflow",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "hifi",
+    "name" : "Hifi Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "high",
+    "name" : "Highstreet",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "hive",
+    "name" : "Hive",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "hook",
+    "name" : "Hooked Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "hot",
+    "name" : "Holo",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "icp",
+    "name" : "Internet Computer",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "icx",
+    "name" : "ICON",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "id",
+    "name" : "Space ID",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "idex",
+    "name" : "IDEX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "idrt",
+    "name" : "Rupiah Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ilv",
+    "name" : "Illuvium",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "imx",
+    "name" : "ImmutableX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "inj",
+    "name" : "Injective",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "iost",
+    "name" : "IOST",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "iota",
+    "name" : "MIOTA",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "iotx",
+    "name" : "IoTex",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "iq",
+    "name" : "IQ",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "iris",
+    "name" : "IRISnet",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "jasmy",
+    "name" : "JasmyCoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},{
+    "symbol" : "joe",
+    "name" : "JOE",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "jst",
+    "name" : "JUST",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "juv",
+    "name" : "Juventus Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "kava",
+    "name" : "Kava",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "kda",
+    "name" : "Kadena",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "key",
+    "name" : "Selfkey",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},{
+    "symbol" : "klay",
+    "name" : "Klaytn",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "kmd",
+    "name" : "Komodo",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},{
+    "symbol" : "knc",
+    "name" : "KyberNetwork",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},{
+    "symbol" : "kp3r",
+    "name" : "keep3rV1",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ksm",
+    "name" : "Kusama",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "lazio",
+    "name" : "Lazio Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "ldo",
+    "name" : "Lido DAO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "lever",
+    "name" : "LeverFi",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "lina",
+    "name" : "linear",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "link",
+    "name" : "ChainLink",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},  {
+    "symbol" : "lit",
+    "name" : "Litentry",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, {
+    "symbol" : "loka",
+    "name" : "League of Kingdoms",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+},
+  {
+    "symbol" : "loom",
+    "name" : "Loom Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "lpt",
+    "name" : "Livepeer",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "lqty",
+    "name" : "Liquity",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "lrc",
+    "name" : "Loopring",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "lsk",
+    "name" : "Lisk",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ltc",
+    "name" : "Litecoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "lto",
+    "name" : "LTO Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "luna",
+    "name" : "Terra",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "lunc",
+    "name" : "Terra Classic",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "magic",
+    "name" : "Magic",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mana",
+    "name" : "Decentraland",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mask",
+    "name" : "Mask Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "matic",
+    "name" : "Polygon",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mbl",
+    "name" : "MovieBloc",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mbox",
+    "name" : "MOBOX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mc",
+    "name" : "Merit Circle",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mdt",
+    "name" : "Measurable Data Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mdx",
+    "name" : "Mdex",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mina",
+    "name" : "Mina",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mkr",
+    "name" : "Maker",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mln",
+    "name" : "Enzyme",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mob",
+    "name" : "MobileCoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "movr",
+    "name" : "Moonriver",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "mtl",
+    "name" : "Metal",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "multi",
+    "name" : "Multichain",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "near",
+    "name" : "NEAR Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "neo",
+    "name" : "NEO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "nexo",
+    "name" : "NEXO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "nkn",
+    "name" : "NKN",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "nmr",
+    "name" : "Numeraire",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "nuls",
+    "name" : "Nuls",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "oax",
+    "name" : "openANX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ocean",
+    "name" : "Ocean Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "og",
+    "name" : "OG Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ogn",
+    "name" : "OriginToken",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "om",
+    "name" : "MANTRA",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "omg",
+    "name" : "OMG Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "one",
+    "name" : "Harmony",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ong",
+    "name" : "Ontology Gas",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ont",
+    "name" : "Ontology",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ooki",
+    "name" : "OokiDAO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "op",
+    "name" : "Optimism",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "orn",
+    "name" : "Orion Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "osmo",
+    "name" : "Osmosis",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "oxt",
+    "name" : "Orchid",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "paxg",
+    "name" : "PAX Gold",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "people",
+    "name" : "ConstitutionDAO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pepe",
+    "name" : "Pepe",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "perl",
+    "name" : "Perlin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "perp",
+    "name" : "Perpetual Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pha",
+    "name" : "Phala Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "phb",
+    "name" : "Phoenix",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pivx",
+    "name" : "PIVX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pla",
+    "name" : "PlayDapp",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pnt",
+    "name" : "pNetwork",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pols",
+    "name" : "Polkastarter",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "polyx",
+    "name" : "Polymesh",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pond",
+    "name" : "Marlin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "porto",
+    "name" : "FC Porto Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "powr",
+    "name" : "PowerLedger",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "prom",
+    "name" : "Prometeus",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pros",
+    "name" : "Prosper",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "psg",
+    "name" : "Paris Saint-Germain Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pundix",
+    "name" : "Pundi X",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "pyr",
+    "name" : "Vulcan Forged PYR",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "qi",
+    "name" : "BENQI",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "qkc",
+    "name" : "QuarkChain",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+} ,
+  {
+    "symbol" : "qnt",
+    "name" : "Quant",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "quick",
+    "name" : "QuickSwap",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rad",
+    "name" : "Radicle",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rare",
+    "name" : "SuperRare",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ray",
+    "name" : "Raydium",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rdnt",
+    "name" : "Radiamt Capital",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "reef",
+    "name" : "Reef",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rei",
+    "name" : "REI Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ren",
+    "name" : "Ren",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "req",
+    "name" : "Request Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rif",
+    "name" : "RSK Infrastructure Framework",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rlc",
+    "name" : "iExecRLC",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rndr",
+    "name" : "Render Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rose",
+    "name" : "Oasis Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rpl",
+    "name" : "Rocket Pool",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rsr",
+    "name" : "Reserve Rights",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rune",
+    "name" : "THORChain",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "rvn",
+    "name" : "Ravencoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sand",
+    "name" : "The Sandbox",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "santos",
+    "name" : "Santos FC Fan Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sc",
+    "name" : "Siacoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "scrt",
+    "name" : "Secret",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sfp",
+    "name" : "SafePal",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "shib",
+    "name" : "SHIBA INU",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "skl",
+    "name" : "SKALE Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "slp",
+    "name" : "Smooth Love Potion",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "snm",
+    "name" : "SONM",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "snt",
+    "name" : "Status",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "snx",
+    "name" : "Synthetix Network Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sol",
+    "name" : "Solana",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "spell",
+    "name" : "Spell Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "srm",
+    "name" : "Serum",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ssv",
+    "name" : "SSV Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "steem",
+    "name" : "Steem",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "stg",
+    "name" : "Stargate Finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "stmx",
+    "name" : "StormX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "storj",
+    "name" : "Storj",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "stpt",
+    "name" : "Standard Tokenization Protocol",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "strax",
+    "name" : "Stratis",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "stx",
+    "name" : "Stacks",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sui",
+    "name" : "Sui",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "super",
+    "name" : "SuperFarm",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sushi",
+    "name" : "Sushi",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sxp",
+    "name" : "Solar",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "syn",
+    "name" : "Synapse",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sys",
+    "name" : "Syscoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "t",
+    "name" : "threshold",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "tfuel",
+    "name" : "Theta Fuel",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "theta",
+    "name" : "Theta Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "tko",
+    "name" : "Tokocrypto",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "tlm",
+    "name" : "Alien Worlds",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "tomo",
+    "name" : "TomoChain",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "torn",
+    "name" : "Tornado Cash",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "trb",
+    "name" : "Tellor Tributes",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "troy",
+    "name" : "Troy",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "tru",
+    "name" : "TrueFi",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "trx",
+    "name" : "TRON",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "tusd",
+    "name" : "TrueUSD",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "twt",
+    "name" : "Trust Wallet Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "uft",
+    "name" : "UniLend",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "uma",
+    "name" : "UMA",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "unfi",
+    "name" : "Unifi Protocol DAO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "uni",
+    "name" : "Uniswap",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "usdc",
+    "name" : "USD Coin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "usdp",
+    "name" : "Pax Dollar",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "usdt",
+    "name" : "TetherUS",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ustc",
+    "name" : "TerraClassicUSD",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "utk",
+    "name" : "Utrust",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "vai",
+    "name" : "vai",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "vet",
+    "name" : "VeChain",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "VGX",
+    "name" : "Voyager Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "vib",
+    "name" : "Viberate",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "vidt",
+    "name" : "VIDT DAO",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "sol",
+    "name" : "Solana",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "vite",
+    "name" : "VITE",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "voxel",
+    "name" : "Voxies",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "vtho",
+    "name" : "VeThor Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "wan",
+    "name" : "Wanchain",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "waves",
+    "name" : "Waves",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "waxp",
+    "name" : "WAX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "wbeth",
+    "name" : "Wrapped Beacon ETH (WBETH)",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "wbtc",
+    "name" : "Wrapped Bitcoin",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "win",
+    "name" : "WINkLink",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "wing",
+    "name" : "Wing Token",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "wnxm",
+    "name" : "Wrapped NXM",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "woo",
+    "name" : "WOO Network",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "wrx",
+    "name" : "WazirX",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "wtc",
+    "name" : "Walton",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xec",
+    "name" : "eCash",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xem",
+    "name" : "NEM",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xlm",
+    "name" : "Stellar Lumens",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xmr",
+    "name" : "Monero",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xno",
+    "name" : "Nano",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xrp",
+    "name" : "Ripple",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xtz",
+    "name" : "Tezos",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xvg",
+    "name" : "Verge",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "xvs",
+    "name" : "Venus",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "yfi",
+    "name" : "yearn.finance",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "yfii",
+    "name" : "DFI.Money",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "ygg",
+    "name" : "Yield Guild Games",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "zec",
+    "name" : "Zcash",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "zen",
+    "name" : "Horizen",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "zil",
+    "name" : "Zilliqa",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}, 
+  {
+    "symbol" : "zrx",
+    "name" : "0x",
+    "price" : "1000",
+    "change" : "1%",
+    "volume" : "100000000",
+"img" : "next.svg"
+}
+]
