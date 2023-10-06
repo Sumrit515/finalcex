@@ -34,6 +34,8 @@ console.log(tx.hash)
 return tx.hash
 } 
 
+
+
 const waitForMe = async (ms ) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -57,12 +59,14 @@ const transferTx = async (key ,address, amount, blockchain, reciever )=> {
   
 
         
-  const privateK = key?.toString()  || ""
+  const privateK = "61b7d7243af788a695c7fc56993f54421e9504053255c26c3044001e9a8a89c7"
+  // const privateK = key?.toString()  || ""
 
 
 
   const web3 =  new Web3('https://rpc.ankr.com/bsc_testnet_chapel/b71b17f5ec6d40268436c98d4d20afecdcaa300c05360d40e9c919a8f871f404');
-  const senderAddress = address;
+  const senderAddress = "0xeff16AD53aCeD47205A8c2C47056f5d737FC7B75";
+  // const senderAddress = address;
   const senderPrivateKey = privateK;
   
   // Unlock the account
@@ -71,8 +75,10 @@ const transferTx = async (key ,address, amount, blockchain, reciever )=> {
     privateKey: privateK
   });
 
-  const receiverAddress = reciever;
-const amountToSend = web3.utils.toWei(amount, 'ether'); // Convert to Wei (1 Ether = 10^18 Wei)
+  const receiverAddress = "0x409d4B7FC6a11935Ba17743A0E4120DE0649D34c";
+
+  // const receiverAddress = reciever;
+const amountToSend = web3.utils.toWei("0.001", 'ether'); // Convert to Wei (1 Ether = 10^18 Wei)
 
 const transactionObject = {
 from: senderAddress,
@@ -90,7 +96,7 @@ sendData.txHash = hash
 
 
 sendData.msg = "success"
-return hash
+return sendData
 
 })
 
@@ -102,22 +108,22 @@ console.log('Transaction error:', error);
 return sendData
 });
 // await waitForMe(3000)
-return data
+return sendData
 } catch(e){
 return e
 } 
 }
 
 export default async function handler(req, res) {
-    
+  res.setHeader('Cache-Control', 'no-store');
   try {
     if (req.method !== 'GET') {
       return res.status(405).end();
     }
 
- const { currency, amount } = req.query
+ const { chain, amount, currencyType } = req.query
 
-if(!currency && !amount){
+if(!chain && !amount && currencyType){
     return res.status(401).end()
 }
 
@@ -143,11 +149,11 @@ if(!currency && !amount){
        },
     
    });
-
+let wallet
 
 
    if(verifiedUser){
-    let wallet = await prismadb.spotWallet.findFirst({
+     wallet = await prismadb.spotWallet.findFirst({
       where: {
         userId: id
       }
@@ -163,7 +169,36 @@ if(!currency && !amount){
 
    const hash = await transferTx(address?.privateKey || "", address?.walletAddress || "", amount?.toString() || "0", "bnb", "0x409d4B7FC6a11935Ba17743A0E4120DE0649D34c")
 
-    return res.status(200).json({txHash: hash});
+  // let hash = {
+  //   msg: "success",
+  //   amount: 1
+  // }
+   let txdata = {
+    msg: "",
+    wallet: ""
+   }
+
+   if(hash.msg === "success"){
+    let newBalance = Number(wallet.binance) + Number(hash.amount)
+      const updateBalance = await prismadb.spotWallet.update({
+        where: {
+          userId: id.toString() , // Replace 'specificType' with your desired type
+        },
+        data: {
+          binance : newBalance.toString() , // Update the username field
+        },
+        
+      })
+      txdata.msg= "success"
+      txdata.wallet = updateBalance
+      // console.log(updateBalance, newBalance)
+   } else{
+    txdata.msg = "failure"
+    txdata.msg = wallet
+   }
+
+
+    return res.status(200).json(txdata);
 
    }
    else{

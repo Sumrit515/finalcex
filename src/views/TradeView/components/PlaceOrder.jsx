@@ -3,6 +3,8 @@ import {auth} from '@clerk/nextjs'
 import axios from "axios";
 import { data } from "autoprefixer";
 import { toast } from "react-hot-toast";
+import { useFetchTradingWalletBalance } from "../../../hooks/useFetchCryptoTransactions";
+import { useQuery } from "react-query";
 
 // interface PlaceOrderProps {
 //   tradeSymbolFirst ?: string;
@@ -13,6 +15,10 @@ const PlaceOrder = ({
   tradeSymbolFirst,
   tradeSymbolSecond
 }) => {
+  const { data, error } = useQuery('bets', useFetchTradingWalletBalance, {
+    refetchInterval: 3000, // 10 seconds in milliseconds
+  });
+
   const [selectBuy, setSelectBuy] = useState(true);
   const [selectSell, setSelectSell] = useState(false);
   const [selectLimit, setSelectLimit] = useState(false);
@@ -20,8 +26,8 @@ const PlaceOrder = ({
   const [isLoading, setIsLoading] = useState(false)
   const [quantity, setQuantity] = useState("0")
   const [price, setPrice] = useState("")
-  const [availableBalanceFirstSymbol, setAvailableBalanceFirstSymbol] = useState(30000)
-  const [availableBalanceSecondSymbol, setAvailableBalanceSecondSymbol] = useState(30000)
+  const [availableBalanceFirstSymbol, setAvailableBalanceFirstSymbol] = useState("0")
+  const [availableBalanceSecondSymbol, setAvailableBalanceSecondSymbol] = useState("0")
   
 
   useEffect(() => {
@@ -33,7 +39,9 @@ const PlaceOrder = ({
         // setAvailableBalanceFirstSymbol(response.data[tradeSymbolSecond?.toLowerCase() || "usdt"])
         //   setAvailableBalanceSecondSymbol(response.data[tradeSymbolSecond?.toLowerCase() || "usdt"])
           //  console.warn(tradeSymbolSecond?.toLowerCase())
-              setPrice(Number(res?.data?.price).toFixed(3))
+          setAvailableBalanceFirstSymbol(data[tradeSymbolFirst?.toLowerCase()])
+          setAvailableBalanceSecondSymbol(data[tradeSymbolSecond?.toLowerCase()])
+          setPrice(Number(res?.data?.price).toFixed(3))
       }catch(e){
         console.log(e)
       }
@@ -93,6 +101,10 @@ toast.error("Insufficient Funds")
    
      
 
+  }
+
+  const test = () => {
+    console.warn(data)
   }
   const onSell = async () => {
     setIsLoading(true)
@@ -221,7 +233,7 @@ setIsLoading(false)
        
           
           ">
-            {availableBalanceFirstSymbol}
+            {availableBalanceSecondSymbol}
             <span className="
             ml-4
             ">
@@ -248,7 +260,7 @@ setIsLoading(false)
        
           
           ">
-            {availableBalanceSecondSymbol}
+            {availableBalanceFirstSymbol}
             <span className="
             ml-4
             ">
@@ -369,8 +381,9 @@ outline-none
               justify-between
               gap-4
               ">
-   <button
+              <button
               disabled={isLoading}
+                // onClick={test}
                 onClick={() => onBuy()}
                 className={`
     w-full

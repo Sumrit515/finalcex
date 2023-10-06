@@ -31,8 +31,8 @@ const [tronAddress, setTronAddress] = useState("0")
 const [address, setAddress] = useState("0x0")      
 const [balance, setBalance] = useState("0")
 const [addressData, setAddressData ] = useState({
-    "bnb"    :     "0",
-    "eth"    :     "0",
+    "binance"    :     "0",
+    "ethereum"    :     "0",
     "matic"    :     "0",
     "tron"    :     "0",
     "usdt"    :     "0"
@@ -55,9 +55,9 @@ useEffect(() => {
         setAddressData(data)
         console.log(data)
         switch(value){
-           case "binance": setActiveBalance(addressData?.bnb);
+           case "binance": setActiveBalance(addressData?.binance);
                        break;
-           case  "ethereum": setActiveBalance(addressData?.eth);
+           case  "ethereum": setActiveBalance(addressData?.ethereum);
                        break;
            case "matic": setActiveBalance(addressData?.matic);
                         break;
@@ -71,7 +71,7 @@ useEffect(() => {
     }catch(e){
         console.log(e)
     }
-}, [addressData?.bnb, addressData?.eth, addressData?.matic, addressData?.tron, addressData?.usdt, data, value])
+}, [addressData?.binance, addressData?.ethereum, addressData?.matic, addressData?.tron, addressData?.usdt, data, value])
 
 
   return (
@@ -119,7 +119,7 @@ onClose={() => setIsOpen(false)}
             {symbol} :
             </div>
             <div>
-                { (Number(activeBalance)/10 ** 18).toFixed(5)}
+                { (Number(activeBalance)).toFixed(5)}
                 </div>
                 
             </div>

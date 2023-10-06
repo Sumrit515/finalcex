@@ -2,7 +2,7 @@ import { useFetchCryptoBalance } from '../../../hooks/useFetchCryptoTransactions
 import React, { useEffect, useState } from 'react'
 import { useQuery } from 'react-query';
 import Image from 'next/image';
-import {Button} from '../../../components/Button';
+import {Button} from '../../../components/ui/button';
 import axios from 'axios';
 import { TransferFundsModal } from '../../../components/modals/TransferFunds';
 import toast from 'react-hot-toast';
@@ -16,7 +16,7 @@ src
 
 {
 
-    const { data, error, isLoading } = useQuery('gets', useFetchCryptoBalance, {
+    const { data, error, isLoading } = useQuery('fits', useFetchCryptoBalance, {
         refetchInterval: 3000, // 10 seconds in milliseconds
       });
 
@@ -36,7 +36,7 @@ const [addressData, setAddressData ] = useState({
 const [activeBalance, setActiveBalance] = useState("")
 
 const transferToTradingWallet = async (amount ) => {
-    if(amount<=Number(activeBalance)){
+    if(amount<=Number(activeBalance) && amount != 0){
         toast.success("transferred")
     }else{
         toast.error("Insufficient funds")
@@ -69,7 +69,64 @@ useEffect(() => {
 
   return (
 <>
+<TransferFundsModal
+amount={amount}
+setAmount={setAmount}
+wallet="Spot"
+currency={symbol}
+onSubmit={() => transferToTradingWallet(amount)}
+isOpen={isOpen}
+onClose={() => setIsOpen(false)}
+/>
+<div className='
+    flex
+    flex-row
+    items-center
+    w-full
+    gap-8
+    '>
 
+<Image
+            src={src}
+            alt={src}
+            width={100}
+            height={100}
+            className='
+            w-8
+            h-8
+            '
+            />
+
+        <div className='
+        flex
+        flex-row
+        gap-8
+        w-full
+       justify-between
+        items-center 
+        '>
+          
+          <div className='
+          font-semibold
+          '>
+            {symbol} :
+            </div>
+            <div>
+                { (Number(activeBalance)/10 ** 18).toFixed(5)}
+                </div>
+                
+            </div>
+            <div>
+                    <Button
+                    onClick={() => setIsOpen(true)}
+                    className='
+                    w-[200px]
+                    '
+                    >
+                        Transfer to Spot Wallet
+                    </Button>
+                    </div>
+    </div>
 </>
    
   )

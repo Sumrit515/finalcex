@@ -37,12 +37,12 @@ const SpotBalance = () => {
              />
              <CryptoCurrencyListSpot
              symbol='BNB'
-             value='bnb'
+             value='binance'
              src='/images/CryptoLogos/binance.png'
              />
              <CryptoCurrencyListSpot
              symbol='ETH'
-             value='eth'
+             value='ethereum'
              src='/images/CryptoLogos/ethereum.png'
              />
              <CryptoCurrencyListSpot

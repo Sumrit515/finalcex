@@ -36,12 +36,12 @@ model VerifiedUser{
 model SpotWallet {
       id String @id @default(auto()) @map("_id") @db.ObjectId
       userId String @unique
-      tron Int
-      ethereum Int
-      binance Int
-      usdt Int
-      bitcoin Int
-      matic Int
+      trx String
+      eth String
+      bnb String
+      usdt String
+      btc String
+      matic String
 
    user VerifiedUser @relation(fields: [id], references: [id], onDelete: Cascade)
 }
