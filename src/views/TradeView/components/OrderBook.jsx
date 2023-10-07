@@ -132,7 +132,7 @@ tradeSymbolSecond
     useEffect(() => {
       async function fetchOrders() {
         try {
-          const {data} = await axios.get(`/api/orderBook?symbol=${tradeSymbolFirst?.toLowerCase()}_${tradeSymbolSecond?.toLowerCase()}`);
+          const {data} = await axios.get(`/api/orderBook?tradeSymbolFirst=${tradeSymbolFirst?.toLowerCase()}&tradeSymbolSecond=${tradeSymbolSecond?.toLowerCase()}`);
           
          let newData =  data?.filter((order)  => order.type === `${isSell? "sell": "buy"}`);
          setBuyOrders(newData)
@@ -141,7 +141,7 @@ tradeSymbolSecond
         }
       }
       fetchOrders()
-  }, [])
+  }, [tradeSymbolSecond, tradeSymbolFirst])
 
 
 

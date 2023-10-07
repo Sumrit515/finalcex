@@ -75,7 +75,7 @@ const Hero = () => {
            
       </div>
 
-      <ComputersCanvas  />
+      {/* <ComputersCanvas  /> */}
 
       <div className='
       absolute

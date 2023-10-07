@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       return res.status(405).end();
     }
  
-    const {symbol} = req.query
+    const {tradeSymbolFirst, tradeSymbolSecond} = req.query
 
     // const { email, name, password } = req.body;
 
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
   
     const id = userId?.toString() 
    
-console.log(symbol)
+// console.log(symbol)
     if(!id) {
          return res.status(401);
     }
@@ -30,7 +30,8 @@ console.log(symbol)
     const latestOrders = await prismadb.order.findMany({
         take: 20, // Limit to 10 orders
         where: {
-            symbol: "bnb_usdt" , // Replace 'specificType' with your desired type
+            tradeSymbolFirst: tradeSymbolFirst ,
+            tradeSymbolSecond: tradeSymbolSecond, // Replace 'specificType' with your desired type
           },
         orderBy: {
           placedAt: 'desc', // Sort by placedAt in descending order

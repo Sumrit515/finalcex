@@ -15,6 +15,7 @@ const PlaceOrder = ({
   tradeSymbolFirst,
   tradeSymbolSecond
 }) => {
+
   const { data, error } = useQuery('bets', useFetchTradingWalletBalance, {
     refetchInterval: 3000, // 10 seconds in milliseconds
   });
@@ -49,49 +50,60 @@ const PlaceOrder = ({
     }
 fetch()
  
-  }, [])
+  }, [tradeSymbolFirst, tradeSymbolSecond, data])
 
 
   const onBuy = async () => {
       setIsLoading(true)
-      alert(Number(quantity)>0)
+      // alert(Number(quantity)>0)
    try{
-    if(availableBalanceFirstSymbol >= Number(quantity)){
-      if(Number(quantity)>0) {
-        try{
-
-          const res = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=${tradeSymbolFirst?.toUpperCase()}${tradeSymbolSecond?.toUpperCase()}`)
-    //  console.log(res?.data)
-          setPrice(Number(res?.data?.price).toFixed(3))
-          console.log(price)
-          const data = {
-            type: "buy",
-            amount: (Number(quantity) * Number(Number(res?.data?.price).toFixed(3)))?.toFixed(4),
-            quantity: quantity.toString() ,
-            symbol: `${tradeSymbolFirst?.toLowerCase()}_${tradeSymbolSecond?.toLowerCase()}`,
-            status: 'pending',
-            orderType: selectMarket? "market" : "limit" ,
-            isCompleted: false
-                }
-          
-                await axios.post(`/api/order`, data)
-          
-                toast.success("Order Placed")
-        } catch(e){
-  console.log(e)
-  toast.error("Something went wrong")
-        } finally{
-  setIsLoading(false)
+    const res = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=${tradeSymbolFirst?.toUpperCase()}${tradeSymbolSecond?.toUpperCase()}`)
+    if(availableBalanceSecondSymbol > 0) {
+       const total = (Number(quantity) * Number(Number(res?.data?.price).toFixed(3)))?.toFixed(4)
+        if(availableBalanceSecondSymbol > total){
+         
+            if(Number(quantity)>0) {
+              try{
+      
+                
+          //  console.log(res?.data)
+                setPrice(Number(res?.data?.price).toFixed(3))
+                console.log(price)
+                const data = {
+                  type: "buy",
+                  price:   Number(res?.data?.price).toFixed(3)  ,
+                  value: (Number(quantity) * Number(Number(res?.data?.price).toFixed(3)))?.toFixed(4),
+                  quantity: quantity.toString() ,
+                  tradeSymbolFirst: tradeSymbolFirst.toLowerCase(),
+                  tradeSymbolSecond: tradeSymbolSecond.toLowerCase(),
+                  status: 'pending',
+                  orderType: selectMarket? "market" : "limit" ,
+                  isCompleted: false
+                      }
+                
+                      await axios.post(`/api/order`, data)
+                
+                      toast.success("Order Placed")
+              } catch(e){
+        console.log(e)
+        toast.error("Something went wrong")
+              } finally{
+        setIsLoading(false)
+              }
+            }
+            else{
+              toast.error("Quantity should be more than 0")
+            }
+         
+      
+        } else{
+          toast.error(`Insufficient ${tradeSymbolSecond} Balance`)
         }
-      }
-      else{
-        toast.error("Quantity should be more than 0")
-      }
-   
-     }
-else{
-toast.error("Insufficient Funds")
-}
+    } else {
+      toast.error(`Insufficient ${tradeSymbolSecond} Balance`)
+    }
+
+  
    } catch(e){
     console.log(e)
    }
@@ -104,7 +116,7 @@ toast.error("Insufficient Funds")
   }
 
   const test = () => {
-    console.warn(data)
+    alert(availableBalanceSecondSymbol)
   }
   const onSell = async () => {
     setIsLoading(true)
@@ -383,7 +395,7 @@ outline-none
               ">
               <button
               disabled={isLoading}
-                // onClick={test}
+            //    onClick={test}
                 onClick={() => onBuy()}
                 className={`
     w-full

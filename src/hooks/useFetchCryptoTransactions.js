@@ -42,7 +42,7 @@ export const useFetchTradingWalletBalance = async () => {
     let response ={}
     try{
        const{data} = await axios.get(`/api/fetch-user-tradingwallet`)
-       console.log(data)
+    //    console.log(data)
        return data
     } catch(e){
         console.log(e)

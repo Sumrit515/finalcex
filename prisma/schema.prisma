@@ -100,11 +100,13 @@ model Tokens {
 model Order {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   userId String
+  price String
   placedAt DateTime @default(now())
   type String
-  amount String
+  value String
   quantity String
-  symbol String
+  tradeSymbolFirst String
+  tradeSymbolSecond String
   status String
   orderType String
   isCompleted Boolean

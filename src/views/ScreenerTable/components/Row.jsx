@@ -55,7 +55,7 @@ const Row = ({
       
           const handleWebSocketMessage = (event) => {
             const message = JSON.parse(event.data);
-      console.log(message)
+      // console.log(message)
               setSocketData(JSON.parse(event.data));
              setIsLoading(false)
           };

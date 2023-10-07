@@ -19,9 +19,11 @@ export default async function handler(req, res) {
     const {
 
       type,
-      amount,
+      price,
+      value,
       quantity, 
-      symbol,
+      tradeSymbolFirst,
+      tradeSymbolSecond,
       status,
       orderType, 
       isCompleted 
@@ -34,15 +36,44 @@ export default async function handler(req, res) {
     if(!type){
         return res.status(400);
     }
+let newWallet 
+
+    if(type === "buy"){
+     const wallet = await prismadb.spotWallet.findFirst({
+        where: {
+          userId: id
+        }
+      })
+      let balance = wallet[tradeSymbolSecond.toLowerCase()]
+      console.log(balance, wallet, value)
+      let newBalance = Number(balance) - Number(value)
+
+      const updateBalance = await prismadb.spotWallet.update({
+        where: {
+          userId: id.toString() , // Replace 'specificType' with your desired type
+        },
+        data: {
+          usdt : newBalance.toString() , // Update the username field
+        },
+        
+
+      })
+   
+
+      newWallet = updateBalance
+
+    }
 
 
     const order = await prismadb.order.create({
         data: {
             userId: id,
             type,
-            amount,
+            price,
+            value,
             quantity, 
-            symbol,
+            tradeSymbolFirst,
+            tradeSymbolSecond,
             status,
             orderType, 
             isCompleted 
