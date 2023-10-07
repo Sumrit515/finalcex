@@ -39,28 +39,38 @@ export default async function handler(req, res) {
 let newWallet 
 
     if(type === "buy"){
+
      const wallet = await prismadb.spotWallet.findFirst({
         where: {
           userId: id
         }
       })
+
+
       let balance = wallet[tradeSymbolSecond.toLowerCase()]
-      console.log(balance, wallet, value)
-      let newBalance = Number(balance) - Number(value)
 
-      const updateBalance = await prismadb.spotWallet.update({
-        where: {
-          userId: id.toString() , // Replace 'specificType' with your desired type
-        },
-        data: {
-          usdt : newBalance.toString() , // Update the username field
-        },
-        
-
-      })
-   
-
-      newWallet = updateBalance
+      if(Number(balance) > Number(value)){
+        console.log(balance, wallet, value)
+        let newBalance = Number(balance) - Number(value)
+  
+        const updateBalance = await prismadb.spotWallet.update({
+          where: {
+            userId: id.toString() , // Replace 'specificType' with your desired type
+          },
+          data: {
+            usdt : newBalance.toString() , // Update the username field
+          },
+          
+  
+        })
+     
+  
+        newWallet = updateBalance
+      }
+      else{
+        return res.status(400).json({ error: `Something went wrong` });
+      }
+     
 
     }
 

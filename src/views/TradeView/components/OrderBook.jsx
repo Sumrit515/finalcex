@@ -132,7 +132,7 @@ tradeSymbolSecond
     useEffect(() => {
       async function fetchOrders() {
         try {
-          const {data} = await axios.get(`/api/orderBook?tradeSymbolFirst=${tradeSymbolFirst?.toLowerCase()}&tradeSymbolSecond=${tradeSymbolSecond?.toLowerCase()}`);
+          const {data} = await axios.get(`/api/orderBook?tradeSymbolFirst=${tradeSymbolFirst.toLowerCase()}&tradeSymbolSecond=${tradeSymbolSecond.toLowerCase()}`);
           
          let newData =  data?.filter((order)  => order.type === `${isSell? "sell": "buy"}`);
          setBuyOrders(newData)
@@ -286,17 +286,16 @@ gap-2
                 place-items-center
            "
                     >
-                      <div>{(Number(item.amount )/ Number(item.quantity)).toFixed(2)}</div>
+                      <div>{item.price}</div>
                       <div>{item.quantity}</div>
                       <div
                         className="
-      
                         place-items-center
-        hidden
-        md:block
-        "
+                        hidden
+                        md:block
+                        "
                       >
-                        {item.amount}
+                        {item.value}
                       </div>
                     </div>
                   </div>

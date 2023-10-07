@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const Footer = () => {
 
     return(
@@ -66,7 +68,10 @@ const Footer = () => {
   <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-      <img src="#" class="mr-5 h-6 sm:h-9" alt="logo" />
+      <Image src="/images/unilogo2.png" class="mr-5 h-8 sm:h-9 w-auto" alt="logo" 
+      width={100}
+      height={100}
+      />
         <p class="max-w-xs mt-4 text-sm text-white">
           TradEx
         </p>

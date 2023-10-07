@@ -48,10 +48,10 @@ export default function Navbar() {
                   <Image
                   onClick={() => router.push("/")}
                     className="h-8 w-auto hover:cursor-pointer"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    src="/images/unilogo2.png"
                     alt="Your Company"
-                    width={8}
-                    height={8}
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block hover:cursor-pointer">
