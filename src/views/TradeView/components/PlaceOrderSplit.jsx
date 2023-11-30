@@ -31,7 +31,7 @@ const PlaceOrderSplit = ({
                               <div class="market-trade-buy">
                                   <form>
                                       <div class="input-group">
-                                          <input type="number" placeholder="Price" disabled value={price} required="" class="form-control"/>
+                                          <input type="number" placeholder="Market" disabled value={"Market"} required="" class="form-control"/>
                                           <div class="input-group-append"><span class="input-group-text">{tradeSymbolSecond}</span></div>
                                       </div>
                                       <div class="input-group">
@@ -39,7 +39,7 @@ const PlaceOrderSplit = ({
                                           <div class="input-group-append"><span class="input-group-text">{tradeSymbolFirst}</span></div>
                                       </div>
                                      
-                                      <p >Available: <span className='font-bold'>{availableBalance}   {tradeSymbol}</span></p>
+                                      <p >Available: <span className='font-bold'>{availableBalance} {tradeSymbol}</span></p>
                                       <p > {caption}<span className="font-semibold ml-4">
                                   {Number(price) * Number(quantity)} {tradeSymbolSecond}
                                   </span> </p>
