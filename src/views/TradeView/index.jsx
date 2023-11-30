@@ -456,35 +456,7 @@ if(
                    
                     
 
-                            <div className='
-                            flex
-                            flex-row
-                            
-                            '>
-                               
-                              
-                                <div className='
-                                w-full
-                            flex
-                            flex-col
-                            col-md-6
-                                '>
-                                    
-                                  
-                                    <Wrapper className='
-                                    h-full
-                                    grow
-                                    '>
-                                    <PlaceOrder
-                                    tradeSymbolFirst={tradeSymbolFirst}
-                                    tradeSymbolSecond={tradeSymbolSecond}
-                                    />
-                                    </Wrapper>
-                                       
-                                    
-                        
-                        </div>
-                            </div>
+                          
             
             
                     </div>
