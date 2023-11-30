@@ -4,7 +4,7 @@
 import React, { useEffect, useState,Fragment} from "react";
 
 import {About, Contact, Experience, Feedbacks, Hero, StarsCanvas, Navbar, Tech, Works} from '../../components'
-import 'bootstrap/dist/css/bootstrap.css'
+
 
 
 

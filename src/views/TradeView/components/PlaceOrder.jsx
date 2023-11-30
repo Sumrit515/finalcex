@@ -64,7 +64,7 @@ fetch()
     const res = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=${tradeSymbolFirst?.toUpperCase()}${tradeSymbolSecond?.toUpperCase()}`)
     if(availableBalanceSecondSymbol > 0) {
        const total = (Number(buyQuantity) * Number(Number(res?.data?.price).toFixed(3)))?.toFixed(4)
-       alert(total)
+      // alert(total)
         if(Number(availableBalanceSecondSymbol) > Number(total)){
          
             if(Number(buyQuantity)>0) {
@@ -157,302 +157,15 @@ setIsLoading(false)
 }
 
   return (
-//     <>
-//       <div
-//         className="
-//           flex
-//           flex-col
-//           gap-4
-//           w-full
-//           h-full
-//           "
-//       >
-//         <div
-//           className="
-//           self-center
-//           font-bold
-//           text-[20px]
-//           "
-//         >
-//           SPOT
-//         </div>
-//         <div
-//           className="
-//           gap-4
-//           flex
-//           flex-col
-//           "
-//         >
-//           <div
-//             className="
-//             flex
-//             flex-row
-//           bg-slate-100
-//             p-1
-//             gap-8
-//             items-center
-//             justify-center
-//             text-center
-//             "
-//           >
-//             <div
-//               onClick={() => {
-//                 setSelectLimit(false);
-//                 setSelectMarket(true);
-//               }}
-//               className={`
-//    font-semibold
-//    hover:cursor-pointer
-//    p-1
-   
-//    rounded-md
-   
-//    ${selectMarket ? "text-white" : "text-black"}
-//    ${selectMarket ? "bg-black" : ""}
-//    ${selectMarket ? "hover:opacity-80" : ""}
-//    pr-3
-//    `}
-//             >
-//               MARKET
-//             </div>
-//             {/* <div
-//               onClick={() => {
-//                 setSelectLimit(true);
-//                 setSelectMarket(false);
-//               }}
-//               className={`
-//    font-semibold
-//    rounded-md
-//    hover:cursor-pointer
-//    ${selectLimit ? "text-white" : "text-black"}
-//    ${selectLimit ? "bg-black" : ""}
-//    ${selectLimit ? "hover:opacity-80" : ""}
-//    p-1
-//    pr-3
-//    `}
-//             >
-//               LIMIT
-//             </div> */}
-//           </div>
-//           <div className="
-//           flex
-//           flex-row
-//           gap-4
 
-//           " >
-//             <p 
-//             className="
-//             font-semibold
-//             "
-//             >
-//             Available Balance :
-//             </p>
-            
-//           <span className="
-       
-          
-//           ">
-//             {availableBalanceSecondSymbol}
-//             <span className="
-//             ml-4
-//             ">
-//             {tradeSymbolSecond}
-//             </span>
-         
-//           </span>
-//           </div>
-//           <div className="
-//           flex
-//           flex-row
-//           gap-4
-
-//           " >
-//             <p 
-//             className="
-//             font-semibold
-//             "
-//             >
-//             Available Balance :
-//             </p>
-            
-//           <span className="
-       
-          
-//           ">
-//             {availableBalanceFirstSymbol}
-//             <span className="
-//             ml-4
-//             ">
-//             {tradeSymbolFirst}
-//             </span>
-         
-//           </span>
-//           </div>
-          
-//           <div>
-//             {/* <div
-//               className="
-//     grid
-//     mb-2
-//     grid-cols-2
-//     place-items-center
-//     bg-slate-100
-//     p-1
-//     "
-//             >
-//               <div
-//                 onClick={() => {
-//                   setSelectBuy(true);
-//                   setSelectSell(false);
-                  
-//                 }}
-//                 className={`
-// w-full
-// text-center
-// ${selectBuy ? "bg-green-300" : ""}
-// ${selectBuy ? "text-white" : "text-black"}
-// hover:cursor-pointer
-// `}
-//               >
-//                 BUY
-//               </div>
-//               <div
-//                 onClick={() => {
-//                   setSelectBuy(false);
-//                   setSelectSell(true);
-//                 }}
-//                 className={`
-// w-full
-// text-center
-// ${selectSell ? "bg-red-300" : ""}
-// ${selectSell ? "text-white" : "text-black"}
-// hover:cursor-pointer
-// `}
-//               >
-//                 SELL
-//               </div>
-//             </div> */}
-//             <div
-//               className="
-// flex
-// flex-col
-// gap-4
-// "
-//             >
-//               {/* <div
-//                 className="
-//     w-full
-//     flex
-//     flex-row
-//     border-[1px]
-//     p-2
-//     focus:border-purple-700
-//     rounded-lg
-//     border-black
-//     gap-2
-//     font-semibold
-//     "
-//               >
-//                 Price ({tradeSymbolSecond}):{" "}
-//                 <input
-//                   className="
-// grow
-// text-right
-// outline-none
-// "
-//                 />
-//               </div> */}
-//               <div
-//                 className="
-//               flex
-//               flex-row
-//               border-[1px]
-//               p-2
-//               rounded-lg
-//               border-black
-//               gap-2
-//               font-semibold
-//               "
-//               >
-//                 Quantity ({tradeSymbolFirst}):{" "}
-//                 <input
-//                 type="number"
-//                 onChange={(e) => setQuantity(e.target.value)}
-//                   className="
-//                 grow
-//                 text-right
-//                 outline-none
-//                 "
-//                 />
-                
-//               </div>
-//               <p className="
-              
-//               "> You will have to pay :<span className="
-//               font-semibold
-//               ml-4
-//               ">
-//                 {Number(price) * Number(quantity)}
-//                 </span> </p>
-//               <div className="
-//               flex
-//               flex-row
-//               justify-between
-//               gap-4
-//               ">
-//               <button
-//               disabled={isLoading}
-//             //    onClick={test}
-//                 onClick={() => onBuy()}
-//                 className={`
-//     w-full
-//     text-center
-//     p-2
-//     rounded-lg
-//     disabled:opacity-80
-//     disabled:cursor-not-allowed
-//    bg-black
-//   hover:opacity-80
-//   text-white
-//     font-semibold
-//     `}
-//               >
-//                 BUY
-//               </button>
-//               <button
-//               disabled={isLoading}
-//                 onClick={() => onSell()}
-//                 className={`
-//     w-full
-//     text-center
-//     p-2
-//     rounded-lg
-//     disabled:opacity-80
-//     disabled:cursor-not-allowed
-//    bg-black
-//    hover:opacity-80
-//   text-white
-//     font-semibold
-//     `}
-//               >
-//                 SELL
-//               </button>
-
-
-//   </div>
-
-             
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
 <>
+
 <div
           className="
-          self-center
+        
           font-bold
           text-[20px]
+          text-center
           w-full
         
           "
@@ -460,7 +173,7 @@ setIsLoading(false)
           SPOT
         </div>
 
-        <div
+        {/* <div
             className="
             flex
             flex-row
@@ -490,7 +203,7 @@ setIsLoading(false)
                         >
               MARKET
             </div>
-            {/* <div
+            <div
               onClick={() => {
                 setSelectLimit(true);
                 setSelectMarket(false);
@@ -507,8 +220,16 @@ setIsLoading(false)
    `}
             >
               LIMIT
-            </div> */}
-          </div>
+            </div>
+          </div> */}
+
+<div class="market-trade">
+                  <ul id="myTab" role="tablist" class="nav nav-tabs">
+                      <li role="presentation" class="nav-item"><button id="limit-tab" data-bs-toggle="tab" data-bs-target="#limit" type="button" role="tab" aria-controls="limit" aria-selected="true" class="nav-link active"> Market </button></li>
+                      
+                  </ul>
+               
+              </div>
 
         <div className="
 flex

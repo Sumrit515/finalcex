@@ -21,7 +21,56 @@ const PlaceOrderSplit = ({
     isLoading
 }) => {
   return (
-    <div>
+
+    <>
+ <div class="market-trade">
+                  
+                  <div id="myTabContent" class="tab-content">
+                      <div id="limit" role="tabpanel" aria-labelledby="limit-tab" class="tab-pane fade show active">
+                          <div class="d-flex justify-content-between">
+                              <div class="market-trade-buy">
+                                  <form>
+                                      <div class="input-group">
+                                          <input type="number" placeholder="Price" disabled value={price} required="" class="form-control"/>
+                                          <div class="input-group-append"><span class="input-group-text">{tradeSymbolSecond}</span></div>
+                                      </div>
+                                      <div class="input-group">
+                                          <input onChange={(e) => setQuantity(e.target.value)} disabled={isLoading} type="number" placeholder="Amount" required="" class="form-control"/>
+                                          <div class="input-group-append"><span class="input-group-text">{tradeSymbolFirst}</span></div>
+                                      </div>
+                                     
+                                      <p >Available: <span className='font-bold'>{availableBalance}   {tradeSymbol}</span></p>
+                                      <p > {caption}<span className="font-semibold ml-4">
+                                  {Number(price) * Number(quantity)} {tradeSymbolSecond}
+                                  </span> </p>
+                                     
+                                    
+                                  </form>
+                                  <button  onClick={() => onSubmit()} className={`btn ${buttonText.toLowerCase()}`}>{buttonText}</button>
+                              </div>
+                              {/* <div class="market-trade-sell">
+                                  <form>
+                                      <div class="input-group">
+                                          <input type="number" placeholder="Price" required="" class="form-control"/>
+                                          <div class="input-group-append"><span class="input-group-text">BTC</span></div>
+                                      </div>
+                                      <div class="input-group">
+                                          <input type="number" placeholder="Amount" required="" class="form-control"/>
+                                          <div class="input-group-append"><span class="input-group-text">ETH</span></div>
+                                      </div>
+                                     
+                                      <p>Available: <span>0 BTC = 0 USD</span></p>
+                                      
+                                      <button class="btn sell">Sell</button>
+                                  </form>
+                              </div> */}
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+
+    {/* <div>
             <>
       <div
         className="
@@ -59,7 +108,7 @@ const PlaceOrderSplit = ({
        
           
           ">
-            {availableBalance}
+            {availableBalanceSecondSymbol}
             <span className="
             ml-4
             ">
@@ -154,17 +203,17 @@ w-full
             //    onClick={test}
                 onClick={() => onSubmit()}
                 className={`
-    w-full
-    text-center
-    p-2
-    rounded-lg
-    disabled:opacity-80
-    disabled:cursor-not-allowed
-   bg-black
-  hover:opacity-80
-  text-white
-    font-semibold
-    `}
+                w-full
+                text-center
+                p-2
+                rounded-lg
+                disabled:opacity-80
+                disabled:cursor-not-allowed
+              bg-black
+                hover:opacity-80
+              text-white
+                font-semibold
+                `}
               >
                 {buttonText}
               </button>
@@ -178,7 +227,9 @@ w-full
         </div>
       </div>
     </>
-    </div>
+    </div> */}
+    </>
+    
   )
 }
 
