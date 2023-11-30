@@ -149,7 +149,7 @@ setBuyPrice(Number(res?.data?.price).toFixed(3))
             toast.success("Order Placed")
     } catch(e){
 console.log(e)
-toast.error("Something went wrong")
+toast.error(`Insufficient ${tradeSymbolFirst} Balance`)
     } finally{
 setIsLoading(false)
     }
