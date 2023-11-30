@@ -158,13 +158,13 @@ tradeSymbolSecond
           <th className="h-12 px-2 text-left align-middle font-medium  ">Total</th>
           </tr></thead>
           <tbody>
-                 {/* <tr><td>ETH/BTC</td><td>0.00020255</td><td class="red">-2.58%</td></tr>
-                 <tr><td>KCS/BTC</td><td>0.00013192</td><td class="green">+5.6%</td></tr>
-                 <tr><td>XRP/BTC</td><td>0.00002996</td><td class="red">-1.55%</td></tr>
-                 <tr><td>VET/BTC</td><td>0.00000103</td><td class="green">+1.8%</td></tr>
-                 <tr><td>EOS/BTC</td><td>0.00000103</td><td class="red">-2.05%</td></tr>
-                 <tr><td>BTT/BTC</td><td>0.00002303</td><td class="red">-1.05%</td></tr>
-           */}
+                 <tr><td>37008.72</td><td>0.465</td><td class="red">1.546</td></tr>
+                 <tr><td>37245.24</td><td>0.541</td><td class="green">345.012</td></tr>
+                 <tr><td>35771.43</td><td>1.287</td><td class="red">465.200</td></tr>
+                 <tr><td>37454.16</td><td>0.497</td><td class="green">1205.321</td></tr>
+                 <tr><td>37711.84</td><td>0.154</td><td class="red">48.154</td></tr>
+                 <tr><td>37142.89</td><td>4.124</td><td class="red">466571.651</td></tr>
+          
              
      
         
