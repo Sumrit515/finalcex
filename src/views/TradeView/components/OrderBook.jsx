@@ -133,7 +133,7 @@ tradeSymbolSecond
       async function fetchOrders() {
         try {
           const {data} = await axios.get(`/api/orderBook?tradeSymbolFirst=${tradeSymbolFirst?.toLowerCase()}&tradeSymbolSecond=${tradeSymbolSecond?.toLowerCase()}`);
-          
+          console.log(data)
          let newData =  data?.filter((order)  => order.type === `${isSell? "sell": "buy"}`);
          setBuyOrders(newData)
         } catch (error) {
@@ -158,114 +158,120 @@ tradeSymbolSecond
           <th className="h-12 px-2 text-left align-middle font-medium  ">Total</th>
           </tr></thead>
           <tbody>
-                 <tr><td>ETH/BTC</td><td>0.00020255</td><td class="red">-2.58%</td></tr>
+                 {/* <tr><td>ETH/BTC</td><td>0.00020255</td><td class="red">-2.58%</td></tr>
                  <tr><td>KCS/BTC</td><td>0.00013192</td><td class="green">+5.6%</td></tr>
                  <tr><td>XRP/BTC</td><td>0.00002996</td><td class="red">-1.55%</td></tr>
                  <tr><td>VET/BTC</td><td>0.00000103</td><td class="green">+1.8%</td></tr>
                  <tr><td>EOS/BTC</td><td>0.00000103</td><td class="red">-2.05%</td></tr>
                  <tr><td>BTT/BTC</td><td>0.00002303</td><td class="red">-1.05%</td></tr>
-          
-                 </tbody></table>
+           */}
+             
      
         
-        <div>
+
           {count > 6
             ? buyOrders.map((item) => {
                 return (
-                  <div
-                    key={item.amount}
-                    className="w-full 
-                font-semibold
-                relative"
-                  >
-                    <div
-                      className={`
-                w-full h-10
+        //           <div
+        //             key={item.amount}
+        //             className="w-full 
+        //         font-semibold
+        //         relative"
+        //           >
+        //             <div
+        //               className={`
+        //         w-full h-10
                 
-                flex
-                `}
-                      style={{
-                        background: `${isSell ? "#F23645" : "#089981"}`,
-                      }}
-                    >
-                      <div
-                        className="h-full
+        //         flex
+        //         `}
+        //               style={{
+        //                 background: `${isSell ? "#F23645" : "#089981"}`,
+        //               }}
+        //             >
+        //               <div
+        //                 className="h-full
                     
-                    bg-white"
-                        style={{
-                          width: `${Math.floor(Math.random() * 91) + 10}%`,
-                        }}
-                      ></div>
-                    </div>
-                    <div
-                      className="
-                absolute
-                 inset-0 
-                grid
-                md:grid-cols-3
-                grid-cols-2
-               text-sm
-                place-items-center
-           "
-                    >
-                      <div>{(Number(item.amount )/ Number(item.quantity)).toFixed(2)}</div>
-                      <div>{item.quantity}</div>
-                      <div
-                        className="
+        //             bg-white"
+        //                 style={{
+        //                   width: `${Math.floor(Math.random() * 91) + 10}%`,
+        //                 }}
+        //               ></div>
+        //             </div>
+        //             <div
+        //               className="
+        //         absolute
+        //          inset-0 
+        //         grid
+        //         md:grid-cols-3
+        //         grid-cols-2
+        //        text-sm
+        //         place-items-center
+        //    "
+        //             >
+        //               <div>{(Number(item.amount )/ Number(item.quantity)).toFixed(2)}</div>
+        //               <div>{item.quantity}</div>
+        //               <div
+        //                 className="
       
-                        place-items-center
-        hidden
-        md:block
-        "
-                      >
-                        {item.amount}
-                      </div>
-                    </div>
-                  </div>
+        //                 place-items-center
+        // hidden
+        // md:block
+        // "
+        //               >
+        //                 {item.amount}
+        //               </div>
+        //             </div>
+        //           </div>
+        <tr
+        key={item.amount}
+        ><td>{Number(item.price)}</td><td>{item.quantity}</td><td class="red"> {item.value}</td></tr>
                 );
               })
             : shortOrderBookList.map((item) => {
                 return (
-                  <div
-                    className="
-                            font-bold
-                            grid
-                            grid-cols-3
-                            place-items-center
-                            "
-                    key={item.price}
-                  >
-                    <div
-                      className="
-                        text-sm
-                        place-self-start
-                        "
-                    >
-                      {item.price}
-                    </div>
-                    <div
-                      className="
-                        text-md
+                  // <div
+                  //   className="
+                  //           font-bold
+                  //           grid
+                  //           grid-cols-3
+                  //           place-items-center
+                  //           "
+                  //   key={item.price}
+                  // >
+                  //   <div
+                  //     className="
+                  //       text-sm
+                  //       place-self-start
+                  //       "
+                  //   >
+                  //     {item.price}
+                  //   </div>
+                  //   <div
+                  //     className="
+                  //       text-md
                         
-                        "
-                    >
-                      {item.amount}
-                    </div>
-                    <div
-                      className="
-                        text-sm
-                        place-self-end
-                        hidden
-                        md:block
-                        "
-                    >
-                      {item.total}
-                    </div>
-                  </div>
+                  //       "
+                  //   >
+                  //     {item.amount}
+                  //   </div>
+                  //   <div
+                  //     className="
+                  //       text-sm
+                  //       place-self-end
+                  //       hidden
+                  //       md:block
+                  //       "
+                  //   >
+                  //     {item.total}
+                  //   </div>
+                  // </div>
+                  <tr
+                  key={item.amount}
+                  ><td>{Number(item.price)}</td><td>{item.quantity}</td><td class="red"> {item.value}</td></tr>
                 );
               })}
-        </div>
-    
+      
+      </tbody></table>
     </>
   );
 };

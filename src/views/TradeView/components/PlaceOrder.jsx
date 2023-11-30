@@ -74,7 +74,7 @@ fetch()
           //  console.log(res?.data)
           setBuyPrice(Number(res?.data?.price).toFixed(3))
                 setSellPrice(Number(res?.data?.price).toFixed(3))
-                console.log(price)
+              //  console.log(price)
                 const data = {
                   type: "buy",
                   price:   Number(res?.data?.price).toFixed(3)  ,
