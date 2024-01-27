@@ -7,7 +7,7 @@ import {create} from 'zustand'
 // }
 
 export const useTransferFundsModal = create((set)=> ({
-    isOpen: false,
+    isOpen: true,
     onOpen: () => set({isOpen: true}),
     onClose: () => set({isOpen: false}),
 }))

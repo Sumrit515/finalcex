@@ -13,20 +13,12 @@ export default function handler(
 
 try{
 
-
-
-
-
-
-
-
-
 //   socketRef.current = new WebSocket('wss://data-stream.binance.vision/ws');
   const soc = new WebSocket('wss://data-stream.binance.vision/ws');
 
   const handleWebSocketMessage = (event) => {
     const message = JSON.parse(event.data);
-console.log(message)
+    console.log(message)
 
     //   setData(JSON.parse(event.data as string));
  

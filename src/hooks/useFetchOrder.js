@@ -1,7 +1,7 @@
 export const useFetchAllOrders = async () => {
 try{
 
-} catch(e){
-    
+} catch(e){ 
+    console.log(e)
 }
 }

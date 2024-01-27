@@ -29,67 +29,6 @@ const index = () => {
 
 
 
-const line1 = "And the abyss also"
-const line2 = "gaxes into you"
-const letters = Array.from(line1);
-
-
-const sentence = {
-  hidden: {opacity: 1},
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 2,
-      staggerChildren: 0.88
-    },
-  },
-}
-
-const letter = {
-  hiddenL: {
-    opacity: 0,
-    y: 50
-  }
-}
-
-const container = {
-  hidden: { opacity: 0 },
-  visible: (i = 1) => ({
-    opacity: 1,
-    transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
-  }),
-};
-
-const child = {
-  visible: {
-    opacity: 1,
-    x: 0,
-    y: 0,
-    transition: {
-      type: "spring",
-      damping: 12,
-      stiffness: 100,
-    },
-  },
-  hidden: {
-    opacity: 0,
-    x: -20,
-    y: 10,
-    transition: {
-      type: "spring",
-      damping: 12,
-      stiffness: 100,
-    },
-  },
-};
-
-
-
-
-
-
- 
-
 
 return(
   <>

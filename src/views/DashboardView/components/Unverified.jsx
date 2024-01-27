@@ -13,6 +13,7 @@ import { useStoreModal } from '../../../hooks/useStoreModal'
 import { StoreModal } from '../../../components/modals/storeModal'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
+import { Switcher } from '../../../components/Switcher'
 
 
 
@@ -27,7 +28,7 @@ const Unverified = () => {
         success : 5
     }
 
-    const [step, setStep] = useState<STEPS>(STEPS.country)
+    const [step, setStep] = useState(STEPS.country)
     const [isNextDisabled, setIsNextDisabled] = useState(false)
     const [isBackDisabled, setIsBackDisabled] = useState(false)
     const [country, setCountry] = useState("Select a country")
@@ -82,6 +83,7 @@ const Unverified = () => {
             gap-4
             '
             >
+                
             <Heading
               title='Where are you from?'
               subtitle='Select your residency and follow the steps'
@@ -90,10 +92,10 @@ const Unverified = () => {
                     
                         <DropdownMenuTrigger asChild>
                             <Button 
-                            
+                            variant="ghost"
                             >{country}</Button>
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent  className="w-60
+                        <DropdownMenuContent  className="w-96
                         h-56
                        overflow-scroll 
                         ">
@@ -383,6 +385,7 @@ const Unverified = () => {
                     
                     <DropdownMenuTrigger asChild>
                         <Button 
+                         variant="ghost"
                         className='
                         w-56
                         '

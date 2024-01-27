@@ -25,7 +25,7 @@ export const TransferFundsModal = ({
 }) => {
 
 
-    // const transferFundsModal = useTransferFundsModal()
+    const transferFundsModal = useTransferFundsModal()
     const handleSubmit = (amount) => {
         alert(amount)
         onSubmit(amount)
@@ -36,8 +36,8 @@ export const TransferFundsModal = ({
         <Modal
         title="Are you sure?"
         descripition={`You are transferring ${currency} to your ${wallet} wallet!`}
-        isOpen={isOpen}
-        onClose={onClose}
+        isOpen={transferFundsModal?.isOpen}
+        onClose={transferFundsModal?.onClose}
         >
 
                 <div>

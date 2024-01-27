@@ -13,8 +13,10 @@ import { SessionProvider, getSession } from 'next-auth/react'
 import { Provider } from 'react-redux';
 import { store } from '../store/store'
 
-import { ClerkProvider } from '@clerk/nextjs'
+import { ClerkProvider, useAuth } from '@clerk/nextjs'
 import Footer from '../components/Footer'
+import axios from 'axios'
+import { TransferFundsModal } from '../components/modals/TransferFunds'
 
 
 
@@ -42,6 +44,27 @@ export default function App({ Component, pageProps: {session, ...pageProps} }) {
 
   const [currentUser, setCurrentUser] = useState({});
 
+
+  const checkUser = async () => {
+    try {
+     const {data} = await axios.get(`/api/fetchVerifiedUser`)
+     console.log(data) 
+     if(!data.isExist) {
+
+         const userCreated = await axios.post(`/api/fetchVerifiedUser`)
+         console.log(userCreated.data)
+     }
+    } catch(e){
+      console.log(e)
+    }
+  }
+
+  useEffect(() => {
+
+  checkUser()
+  }, [])
+
+
   return (
     <ClerkProvider>
 
@@ -53,6 +76,7 @@ export default function App({ Component, pageProps: {session, ...pageProps} }) {
     <ThemeProvider attribute="class">
     
     <Navbar/>
+    <TransferFundsModal/>
     
   <Component {...pageProps} />
    <Footer/>

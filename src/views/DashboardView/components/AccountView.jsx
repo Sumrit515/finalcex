@@ -33,7 +33,7 @@ const AccountView = () => {
    try{
        setIsLoading(true)
   
-       const {data} = await axios.get(`/api/fetchVerifiedUser`)
+       const {data} = await axios.get(`/api/fetch-verified-user-details`)
        console.log(data)
        setUser(data)
   
@@ -90,7 +90,7 @@ const AccountView = () => {
       overflow-hidden
       '>
         <Image
-        src={user.profilePicture}
+        src={user?.profilePicture}
         alt="profile"
         width={100}
         height={100}
@@ -112,7 +112,7 @@ const AccountView = () => {
               Username :
               </div> 
               <div>
-                {user.userId}
+                {user?.userId}
               </div>
             </div> 
           <div className='
@@ -123,7 +123,7 @@ const AccountView = () => {
               Full Name :
               </div> 
               <div>
-                {user.fullName}
+                {user?.fullName}
               </div>
             </div> 
           <div className='
@@ -134,7 +134,7 @@ const AccountView = () => {
               Email Id :
               </div> 
               <div>
-                {user.email}
+                {user?.email}
               </div>
             </div> 
           <div className='
@@ -145,7 +145,7 @@ const AccountView = () => {
               Phone No. :
               </div> 
               <div>
-                {user.phoneNumber}
+                {user?.phoneNumber}
               </div>
             </div> 
           <div className='
@@ -156,7 +156,7 @@ const AccountView = () => {
               Address :
               </div> 
               <div>
-                {user.address}
+                {user?.address}
               </div>
             </div> 
           <div className='
@@ -167,7 +167,7 @@ const AccountView = () => {
               Verified :
               </div> 
               <div>
-                {user.isVerified ? "Verified"  : "Not Verified"}
+                {user?.isVerified ? "Verified"  : "Not Verified"}
               </div>
             </div> 
           <div className='
@@ -178,7 +178,7 @@ const AccountView = () => {
               Verification Status :
               </div> 
               <div>
-                {user.verifcationStatus}
+                {user?.verifcationStatus}
               </div>
             </div> 
         </div>

@@ -3,6 +3,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import Verified from './Verified'
 import Unverified from './Unverified'
+import { RedirectToSignIn, redirectToSignIn } from '@clerk/nextjs'
+import { PuffLoader } from 'react-spinners'
 
 
 
@@ -14,12 +16,14 @@ const IdentificationView = () => {
     })
 
     const [mounted, setMounted] = useState(false)
-   
+    const [isLoading, setIsLoading] = useState(false)
+  
 
 useEffect(() => {
 
     const fetchUser = async() => {
         try{
+          setIsLoading(true)
          const {data} = await axios.get("/api/fetchVerifiedUser")
          console.log(data) 
          setUserVerification(data)
@@ -27,6 +31,7 @@ useEffect(() => {
 console.log(e)
         } finally{
 setMounted(true)
+setIsLoading(false)
         }
     }
     fetchUser()
@@ -35,19 +40,23 @@ setMounted(true)
 if(!mounted) {
   return null
 }
+if(!userVerification.isExist) {
+  redirectToSignIn("/")
+}
 
 
   return (
-
-    <div>
-  {userVerification.isExist ? 
+<>
+{ isLoading ? <PuffLoader size={100}/> : <div>
+  {userVerification.verificationStatus !== "INCOMPLETE" ? 
     
-    
-      userVerification.verificationStatus === "pending" ? (<>
+      userVerification.verificationStatus === "PENDING" ? (<>
       Verification Pending
-      </>) : (<>
+      </>) : (
+      <>
      <Verified/>
-      </>)
+      </>
+      )
 
     
   : (
@@ -56,7 +65,10 @@ if(!mounted) {
     </>
   )}
 
-    </div>
+    </div>}
+</>
+
+   
   )
 }
 

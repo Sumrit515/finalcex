@@ -5,18 +5,20 @@ import axios from 'axios';
 import { toast } from 'react-hot-toast';
 
 
-export function generateAccount(seedPhrase  = "", index)
+export function generateAccount( index, seedPhrase  = "")
  {
   let wallet;
 
   // If the seed phrase is not provided, generate a random mnemonic using a CSPRNG
   if (seedPhrase === "") {
     seedPhrase = Wallet.createRandom().mnemonic.phrase;
+   
   }
 
 
   // If the seed phrase does not contain spaces, it is likely a mnemonic
   wallet = (seedPhrase.includes(" ")) ? Wallet.fromMnemonic(seedPhrase, `m/44'/60'/0'/0/${index}`) : 
+
   new Wallet(seedPhrase);
 
   const { address } = wallet;
@@ -166,6 +168,6 @@ export function shortenBalance(str) {
 
 // }
 
-export function toFixedIfNecessary( value, decimalPlaces =2 ){
+export function toFixedIfNecessary( value, decimalPlaces = 2 ){
   return +parseFloat(value).toFixed( decimalPlaces );
 }

@@ -7,6 +7,7 @@ import { getAuth   } from '@clerk/nextjs/server';
 import { NextResponse } from 'next/server';
 import { Order } from '@prisma/client';
 import { generateAccount, generateTronAccount } from '../../utils/AccountUtils';
+import { currencyDetails } from '../../constant/constant';
 
 export default async function handler(req, res) {
     
@@ -61,21 +62,21 @@ if(!blockchain){
 
    if(address === null){
 
+
     if(blockchain !== "tron") {
 
-        const account = await generateAccount()
+        const account = await generateAccount("1")
 
 
 
         const newAddress = await prismadb.cryptoAccount.create({
             data: {
              blockchain: "evm",
-             nativeCurrency: "evm",
-             currencyName: "evm",
-             currencySymbol: "evm",
+             networkName: currencyDetails[blockchain?.toString()].networkName ,
+             currencyName: currencyDetails[blockchain?.toString()].currencyName,
+             currencySymbol: currencyDetails[blockchain?.toString()].currencySymbol,
              walletAddress: account.account.address,
              privateKey: account.account.privateKey,
-             quantity: 0,
              userId: id.toString()
             }
         })
@@ -83,17 +84,16 @@ if(!blockchain){
         const account = await generateTronAccount()
 
         const newAddress = await prismadb.cryptoAccount.create({
-            data: {
-             blockchain: "tron",
-             nativeCurrency: "trx",
-             currencyName: "trx",
-             currencySymbol: "trx",
-             walletAddress: account.account,
-             privateKey: account.privateKey,
-             quantity: 0,
-             userId: id.toString()
-            }
-        })
+          data: {
+            blockchain: "tron",
+            networkName: currencyDetails[blockchain?.toString()].networkName ,
+            currencyName: currencyDetails[blockchain?.toString()].currencyName,
+            currencySymbol: currencyDetails[blockchain?.toString()].currencySymbol,
+            walletAddress: account.account,
+            privateKey: account.privateKey,
+            userId: id.toString()
+          }
+      })
     }
  
     
@@ -122,6 +122,7 @@ if(!blockchain){
    
      
   } catch (error) {
+   
     return res.status(400).json({ error: `Something went wrong: ${error}` });
   }
 }

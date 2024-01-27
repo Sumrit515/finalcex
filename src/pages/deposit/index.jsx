@@ -10,6 +10,7 @@ import { Switcher } from "../../components/Switcher";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import Image from "next/image";
+import CryptoDepositsTable from "../../components/deposits/CryptoDeposits";
 
 const index = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -20,6 +21,7 @@ const index = () => {
   );
   const [chooseNetwork, setChooseNetwork] = useState("Select The Network");
   const [open, setOpen] = useState(false);
+  const [cryptoData, setCryptoData] = useState()
 
   const currencyList = [
     {
@@ -78,6 +80,44 @@ const index = () => {
     },
   ];
 
+  const blockchainNetworkList = {
+    "trx" : [
+      {
+        label : "Tron",
+        value : "tron"
+      }
+    ],
+    "usdt" : [
+      {
+        label : "Tron",
+        value : "tron"
+      },
+      {
+        label: "Binance Coin (BNB)",
+        value: "binance",
+      },
+    ],
+    "eth" : [
+      {
+        label : "Ethereum",
+        value : "ethereum"
+      }
+    ],
+    "bnb" : [
+      {
+        label : "Binance Smart Chain (BSC)",
+        value : "binance"
+      }
+    ],
+    "matic" : [
+      {
+        label : "Polygon",
+        value : "polygon"
+      }
+    ],
+
+  }
+
   const [showStatusBar, setShowStatusBar] = useState(true);
   const [showActivityBar, setShowActivityBar] = useState(false);
   const [showPanel, setShowPanel] = useState(false);
@@ -94,8 +134,9 @@ const index = () => {
   });
 
   const GenerateAddress = async () => {
-    console.log("Generating Address");
+   
     try {
+      console.log(network)
       setIsLoading(true);
       setIsDisabled(true);
       const { data } = await axios.get(
@@ -109,6 +150,7 @@ const index = () => {
       console.log(e);
     } finally {
       setIsLoading(false);
+      setIsDisabled(false);
     }
   };
 
@@ -122,6 +164,42 @@ const index = () => {
   };
 
   let body = <></>;
+  let networkBody = (
+    <div
+            className="
+                        grid 
+                        grid-cols-2
+                        gap-4
+                        place-items-center
+                        "
+          >
+            <div>
+              <h1
+                className="
+                                    text-md
+                                    text-black
+                                    font-bold
+                                    "
+              >
+                Blockchain network is :
+              </h1>
+            </div>
+
+            <div
+              className="
+                            
+                                "
+            >
+              <Switcher
+                items={blockchainNetworkList[selectCrypto]}
+                value={network}
+                setValue={setNetwork}
+              />
+            </div>
+          </div>
+  );
+
+  
 
   if (currency === "cryptocurrency") {
     body = (
@@ -167,40 +245,9 @@ const index = () => {
               />
             </div>
           </div>
-          <div
-            className="
-                        grid 
-                        grid-cols-2
-                        gap-4
-                        place-items-center
-                        "
-          >
-            <div>
-              <h1
-                className="
-                                    text-md
-                                    text-black
-                                    font-bold
-                                    "
-              >
-                Blockchain network is :
-              </h1>
-            </div>
+          {selectCrypto && networkBody}
 
-            <div
-              className="
-                            
-                                "
-            >
-              <Switcher
-                items={netWorkList}
-                value={network}
-                setValue={setNetwork}
-              />
-            </div>
-          </div>
-
-          {!isDisabled && (
+          {network && selectCrypto &&!isDisabled && (
             <Button
               disabled={isDisabled}
               onClick={GenerateAddress}
@@ -455,6 +502,10 @@ height={700}/>
 
   </div>
     </div>
+    <div className="px-10">
+    <CryptoDepositsTable/>
+    </div>
+    
     
     </>
   );

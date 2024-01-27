@@ -10,20 +10,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum VERIFICATIONSTATUS {
+  PENDING
+  INCOMPLETE
+  SUCCESS
+  FAILURE
+}
+
 model VerifiedUser{
   id String @id @default(auto()) @map("_id") @db.ObjectId
   userId String @unique
   userName String?
   phoneNumber String?
-  fullName String
-  address String
-  email String
-  documentType String
-  documentUrl String
-  passportPicture String
-  profilePicture String
-  verifcationStatus String
-  isVerified Boolean
+  fullName String?
+  address String?
+  email String?
+  documentType String?
+  documentUrl String?
+  passportPicture String?
+  profilePicture String?
+  verifcationStatus VERIFICATIONSTATUS @default(INCOMPLETE)
+  isVerified Boolean?
   upiId String?
   order Order[]
   cryptoTransaction CryptoTransaction[]
@@ -56,6 +63,7 @@ model FiatAccount{
 }
 
 model FiatTransaction{
+  
   id String @id @default(auto()) @map("_id") @db.ObjectId
 
   type String
@@ -73,12 +81,11 @@ model CryptoAccount{
    id String @id @default(auto()) @map("_id") @db.ObjectId
    userId String 
    blockchain String
-   nativeCurrency String
+   networkName String
    currencySymbol String
    currencyName String
    walletAddress String
    privateKey String
-   quantity Int
    generatedAt DateTime @default(now())
    user VerifiedUser @relation(fields: [id], references: [id], onDelete: Cascade)
 }
@@ -116,6 +123,7 @@ model Order {
 
 model CryptoTransaction {
   id String @id @default(auto()) @map("_id") @db.ObjectId
+  userId String
   symbol String
   currencyName String
   type String
@@ -127,7 +135,7 @@ model CryptoTransaction {
   reciever String
   sender String
 
-  user VerifiedUser @relation(fields: [id], references: [id], onDelete: Cascade)
+  user VerifiedUser @relation(fields: [userId], references: [userId], onDelete: Cascade)
   
 }
 
@@ -192,3 +200,9 @@ model CryptoTransaction {
 //   genre String
 //   duration String
 // }
+
+
+// well i am getting close to my dreams, by far things are going great, i mean i have generated 8k profit from trading in last 10 days, and it could be possible that by tommorow, i will be able 
+// to make 10k that's actually a good start i think, atleast better than my previouds results. after reaching the 10k mark i will start tading in 2 lots and will book profit and loss totally on the basis of that,
+// let's say i took an initial trade of 2 lots then after reaching my target, i will book the first one, and for the second one i will place a sl of half of my target and i will trail that, this is all
+// about practice to prepae myself for upcoming big lots trading rest depends on a lot of factors, but let's see where this takes me to

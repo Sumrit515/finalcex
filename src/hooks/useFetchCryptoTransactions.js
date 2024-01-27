@@ -1,9 +1,12 @@
 import axios from 'axios'
 
+
 export const useFetchCryptoTransactions = async () => {
 
- const {data} = await axios.get(`https://api.bscscan.com/api?module=account&action=txlist&address=0x7AE2F5B9e386cd1B50A4550696D957cB4900f03a&startblock=0&endblock=99999999&sort=asc&apikey=BHFKF9RXVVBJN32K663EZQASR9PTWAB3UA`)
-return data
+   
+
+    const {data} = await axios.get(`/api/fetch-evm-transactions`)
+ return data
 }
 
 export const useFetchCryptoBalance = async () => {
@@ -48,4 +51,19 @@ export const useFetchTradingWalletBalance = async () => {
         console.log(e)
        return response
     }
+}
+
+export const useFetchUserCryptoBalance = async () => {
+
+   
+        try {
+          const {data} = await axios.get(`/api/fetch-user-crypto-balance`)
+          console.log(data)
+          return data
+        } catch(e) {
+          toast.error("Failed to fetch balance")
+          console.log(e)
+          return e
+        } 
+   
 }

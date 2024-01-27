@@ -34,61 +34,17 @@ export default async function handler(req, res) {
 
  const verifiedUser = await prismadb.verifiedUser.findFirst({
      where: {
-         userId: id.toString() , // Replace 'specificType' with your desired type
+         userId: id.toString() , 
        },
     
    });
 
-   const data = {
-   isExist:  verifiedUser ? true : false,
-   verificationStatus: verifiedUser ? verifiedUser.verifcationStatus : "" 
-   }
 
-// return NextResponse.json(order)
 
-  return res.status(200).json(data);
+  return res.status(200).json(verifiedUser);
     }
  
 
-    else if(req.method === "POST"){
-      
- 
-
-    //  const user = getAuth(req);
-    //  console.log(user)
-
-
-
-
-     const { userId } = getAuth(req);
-
- const userDetails =  await clerkClient.users.getUser(userId || "")
-
- const data = {
-  userId: userDetails.id,
-  userName : `${userDetails.username}`,
-  fullName : `${userDetails.firstName} ${userDetails.lastName}`,
-  email: userDetails.emailAddresses[0].emailAddress,
-  isVerified : false,
-  profilePicture : userDetails.imageUrl
- }
- console.log(data)
-   
-    
- 
-     if(!userId) {
-          return res.status(401);
-     }
- 
-   const newUser = await prismadb.verifiedUser.create({data})
-   console.log(newUser)
-
-
- 
-      return res.status(200).json({name : ""});
-      
-
-    } 
 
     else{
       return res.status(405).end();

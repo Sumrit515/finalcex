@@ -90,7 +90,7 @@
     "tailwindcss": "^3",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.155.0",
-    "tronweb": "^5.3.0",
+    "tronweb": "^5.3.1",
     "typescript": "5.2.2",
     "web3": "^1.9.0",
     "ws": "^8.14.0",

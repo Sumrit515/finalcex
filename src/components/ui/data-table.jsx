@@ -3,6 +3,7 @@
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { useState } from "react"
+import SkeletonLoader from "../SkeletonLoader"
 
 import {
   ColumnDef,
@@ -36,7 +37,8 @@ export function DataTable({
   data,
   searchKey,
   pagination = true,
-  search = true
+  search = true,
+  isLoading
 }) {
   
     const [columnFilters, setColumnFilters] = useState(
@@ -99,7 +101,7 @@ export function DataTable({
                     >
                         {row.getVisibleCells().map((cell) => (
                         <TableCell key={cell.id}>
-                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                            {isLoading ? <SkeletonLoader/> : flexRender(cell.column.columnDef.cell, cell.getContext()) }
                         </TableCell>
                         ))}
                     </TableRow>

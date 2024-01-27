@@ -26,7 +26,6 @@ const [tronAddress, setTronAddress] = useState("0")
 const [address, setAddress] = useState("0x0")      
 const [balance, setBalance] = useState("0")
 const [addressData, setAddressData ] = useState({
-
     "bnb"    :     "0",
     "eth"    :     "0",
     "matic"    :     "0",

@@ -58,7 +58,7 @@ const getLabel = (item, value) => {
   const result = item.find((item) => item.value === value)
   if(result)
 {
-    console.log(result)
+
   return result.label
 }
 return ""

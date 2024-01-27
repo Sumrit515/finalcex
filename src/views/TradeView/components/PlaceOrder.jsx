@@ -130,8 +130,8 @@ fetch()
     try{
 
       const res = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=${tradeSymbolFirst?.toUpperCase()}${tradeSymbolSecond?.toUpperCase()}`)
-//  console.log(res?.data)
-setBuyPrice(Number(res?.data?.price).toFixed(3))
+      //  console.log(res?.data)
+      setBuyPrice(Number(res?.data?.price).toFixed(3))
       setSellPrice(Number(res?.data?.price).toFixed(3))
       console.log(price)
       const data = {
@@ -160,14 +160,12 @@ setIsLoading(false)
 
 <>
 
-<div
+        <div
           className="
-        
           font-bold
           text-[20px]
           text-center
           w-full
-        
           "
         >
           SPOT
@@ -177,9 +175,9 @@ setIsLoading(false)
             className="
             flex
             flex-row
-          bg-slate-100
+            bg-slate-100
             p-1
-           w-full
+            w-full
             items-center
             justify-center
         
@@ -209,21 +207,21 @@ setIsLoading(false)
                 setSelectMarket(false);
               }}
               className={`
-   font-semibold
-   rounded-md
-   hover:cursor-pointer
-   ${selectLimit ? "text-white" : "text-black"}
-   ${selectLimit ? "bg-black" : ""}
-   ${selectLimit ? "hover:opacity-80" : ""}
-   p-1
-   pr-3
-   `}
+              font-semibold
+              rounded-md
+              hover:cursor-pointer
+              ${selectLimit ? "text-white" : "text-black"}
+              ${selectLimit ? "bg-black" : ""}
+              ${selectLimit ? "hover:opacity-80" : ""}
+              p-1
+              pr-3
+              `}
             >
               LIMIT
             </div>
           </div> */}
 
-<div class="market-trade">
+              <div class="market-trade">
                   <ul id="myTab" role="tablist" class="nav nav-tabs">
                       <li role="presentation" class="nav-item"><button id="limit-tab" data-bs-toggle="tab" data-bs-target="#limit" type="button" role="tab" aria-controls="limit" aria-selected="true" class="nav-link active"> Market </button></li>
                       
@@ -232,56 +230,56 @@ setIsLoading(false)
               </div>
 
         <div className="
-flex
-flex-row
-gap-8
-">
-  <div className="
-  flex-1
-  ">
-  <PlaceOrderSplit
-   caption={"You will have to Pay :"}
-    availableBalanceFirstSymbol={availableBalanceFirstSymbol}
-    availableBalanceSecondSymbol={availableBalanceSecondSymbol}
-    availableBalance={availableBalanceSecondSymbol}
-    tradeSymbol={tradeSymbolSecond}
-    tradeSymbolFirst={tradeSymbolFirst}
-    tradeSymbolSecond={tradeSymbolSecond}
-    selectMarket={selectMarket}
-    selectLimit={selectLimit}
-    setSelectLimit={setSelectLimit}
-    setSelectMarket={setSelectMarket}
-    price={buyPrice}
-    quantity={buyQuantity}
-    setQuantity={setBuyQuantity}
-    setPrice={setBuyPrice}
-    onSubmit={onBuy}
-    isLoading={isLoading}
-    buttonText="Buy"
-  />
-  </div>
-<div className="flex-1">
-<PlaceOrderSplit
-caption={"You will Recieve :"}
- availableBalanceFirstSymbol={availableBalanceFirstSymbol}
- availableBalanceSecondSymbol={availableBalanceSecondSymbol}
- availableBalance={availableBalanceFirstSymbol}
- tradeSymbol={tradeSymbolFirst}
- tradeSymbolFirst={tradeSymbolFirst}
- tradeSymbolSecond={tradeSymbolSecond}
- selectMarket={selectMarket}
- selectLimit={selectLimit}
- setSelectLimit={setSelectLimit}
- setSelectMarket={setSelectMarket}
- price={sellPrice}
- quantity={sellQuantity}
- setQuantity={setSellQuantity}
- setPrice={setSellPrice}
- onSubmit={onSell}
- isLoading={isLoading}
- buttonText="Sell"
-/>
-</div>
+        flex
+        flex-row
+        gap-8
+        ">
+          <div className="
+          flex-1
+          ">
+          <PlaceOrderSplit 
+            caption={"You will have to Pay :"}
+            availableBalanceFirstSymbol={availableBalanceFirstSymbol}
+            availableBalanceSecondSymbol={availableBalanceSecondSymbol}
+            availableBalance={availableBalanceSecondSymbol}
+            tradeSymbol={tradeSymbolSecond}
+            tradeSymbolFirst={tradeSymbolFirst}
+            tradeSymbolSecond={tradeSymbolSecond}
+            selectMarket={selectMarket}
+            selectLimit={selectLimit}
+            setSelectLimit={setSelectLimit}
+            setSelectMarket={setSelectMarket}
+            price={buyPrice}
+            quantity={buyQuantity}
+            setQuantity={setBuyQuantity}
+            setPrice={setBuyPrice}
+            onSubmit={onBuy}
+            isLoading={isLoading}
+            buttonText="Buy"
+          />
+          </div>
+          <div className="flex-1">
+          <PlaceOrderSplit
+          caption={"You will Recieve :"}
+          availableBalanceFirstSymbol={availableBalanceFirstSymbol}
+          availableBalanceSecondSymbol={availableBalanceSecondSymbol}
+          availableBalance={availableBalanceFirstSymbol}
+          tradeSymbol={tradeSymbolFirst}
+          tradeSymbolFirst={tradeSymbolFirst}
+          tradeSymbolSecond={tradeSymbolSecond}
+          selectMarket={selectMarket}
+          selectLimit={selectLimit}
+          setSelectLimit={setSelectLimit}
+          setSelectMarket={setSelectMarket}
+          price={sellPrice}
+          quantity={sellQuantity}
+          setQuantity={setSellQuantity}
+          setPrice={setSellPrice}
+          onSubmit={onSell}
+          isLoading={isLoading}
+          buttonText="Sell"
+          />
+          </div>
 
 </div>
 </>
@@ -290,3 +288,6 @@ caption={"You will Recieve :"}
 };
 
 export default PlaceOrder;
+
+
+// this is the new file that i should work on now, i got tasks to do now, time to start the work now, first this is a ego problem, and 2nd what is this man i can't stop laughimg , it's hilarious , oh man man man it was , but what should i do now, what should i tell her now, the boy is right, man it looks good, 
