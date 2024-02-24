@@ -3,6 +3,10 @@ import { Modal } from "../ui/modal"
 import { Button } from "../ui/button"
 import { data } from "autoprefixer";
 import { useState } from "react";
+import { Switcher } from "../Switcher";
+import { FaExchangeAlt } from "react-icons/fa";
+import { wallets } from "../../constant/constant";
+
 
 // interface TrasnferFundsProps {
 //     onSubmit :  (amount:  number) =>void;
@@ -21,9 +25,38 @@ export const TransferFundsModal = ({
     isOpen,
     onClose,
     amount,
-    setAmount
+    setAmount,
+    selectSymbol,
+    setSelectSymbol,
+    selectFirstWallet,
+    setSelectFirstWallet,
+    selectSecondWallet,
+    setSelectSecondWallet
 }) => {
 
+    const cryptocurrencyList = [
+        {
+          label: "Tron (TRX)",
+          value: "trx",
+        },
+        {
+          label: "Tether Us Dolar (USDT)",
+          value: "usdt",
+        },
+        {
+          label: "Binance Coin (BNB)",
+          value: "bnb",
+        },
+        {
+          label: "Ethereum (ETH)",
+          value: "eth",
+        },
+        {
+          label: "Polygon (MATIC)",
+          value: "matic",
+        },
+      ];
+    
 
     const transferFundsModal = useTransferFundsModal()
     const handleSubmit = (amount) => {
@@ -34,15 +67,39 @@ export const TransferFundsModal = ({
 
     return(
         <Modal
-        title="Are you sure?"
-        descripition={`You are transferring ${currency} to your ${wallet} wallet!`}
+        title="Transfer"
+        descripition={`Transfer your funds into spot wallet to start trading!`}
         isOpen={transferFundsModal?.isOpen}
         onClose={transferFundsModal?.onClose}
         >
 
+            <div className=" rounded-xl flex flex-row items-center justify-between">
+                From
                 <div>
+                    <Switcher
+                     items={wallets.filter(item => item.value !== selectSecondWallet)}
+                     value={selectFirstWallet}
+                     setValue={setSelectFirstWallet}
+                    />
+                    </div>
+            </div>
+            <div className="mt-8 mb-8 w-full hover:cursor-pointer hover:opacity-60">
+                <FaExchangeAlt onClick={() => {setSelectFirstWallet(selectSecondWallet) ; setSelectSecondWallet(selectFirstWallet) ;} } className="rotate-90 mx-auto"/>
+            </div>
+            <div className="rounded-xl flex flex-row items-center justify-between">
+                To
+                <div>
+                    <Switcher
+                     items={wallets.filter(item => item.value !== selectFirstWallet)}
+                     value={selectSecondWallet}
+                     setValue={setSelectSecondWallet}
+                    />
+                    </div>
+            </div>
+
+                <div className="flex flex-row items-center gap-4 justify-between mt-4">
                     <label htmlFor="amount">
-                        Amount
+                        Amount ({selectSymbol})
                     </label>
                    <input
                    required
@@ -70,7 +127,7 @@ export const TransferFundsModal = ({
                 ">
                 <Button 
                 variant="outline"
-                onClick={onClose}>Cancel</Button>
+                onClick={transferFundsModal?.onClose}>Cancel</Button>
                 <Button 
                 onClick={() => onSubmit(amount)}
                 >Cofirm</Button>

@@ -52,51 +52,31 @@ export default async function handler(req, res) {
 
     else if(req.method === "POST"){
       
- 
-
-    //  const user = getAuth(req);
-    //  console.log(user)
-
-
-
 
      const { userId } = getAuth(req);
 
     const userDetails =  await clerkClient.users.getUser(userId || "")
 
-    const data = {
-      userId: userDetails?.id,
-      userName : `${userDetails.username}`,
-      fullName : `${userDetails.firstName} ${userDetails.lastName}`,
-      email: userDetails.emailAddresses[0].emailAddress,
-      isVerified : false,
-      profilePicture : userDetails.imageUrl
-    }
-    console.log(data)
-      
-    
-   
 
      if(!userId) {
           return res.status(401);
      }
  
-   const newUser = await prismadb.verifiedUser.create({data})
+   
 
 
-   const userSpotWallet = await prismadb.spotWallet.create({
-    userId : userDetails?.id,
+   const userSpotWallet = await prismadb.spotWallet.create({data :{
+    userId : userDetails.id,
     tron: 0,
     eth: 0,
     btc: 0,
     matic: 0,
     usdt: 0,
     bnb: 0
-   })
-
+   }})
 
  
-      return res.status(200).json({name : ""});
+      return res.status(200).json({userSpotWallet});
       
 
     } 

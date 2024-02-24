@@ -15,6 +15,11 @@ enum VERIFICATIONSTATUS {
   INCOMPLETE
   SUCCESS
   FAILURE
+  BLOCKED
+}
+enum USERSTATUS {
+  ACTIVE
+  BLOCKED
 }
 
 model VerifiedUser{
@@ -29,7 +34,8 @@ model VerifiedUser{
   documentUrl String?
   passportPicture String?
   profilePicture String?
-  verifcationStatus VERIFICATIONSTATUS @default(INCOMPLETE)
+  verificationStatus VERIFICATIONSTATUS @default(INCOMPLETE)
+  userStatus USERSTATUS @default(ACTIVE)
   isVerified Boolean?
   upiId String?
   order Order[]
@@ -43,14 +49,16 @@ model VerifiedUser{
 model SpotWallet {
       id String @id @default(auto()) @map("_id") @db.ObjectId
       userId String @unique
-      trx String
-      eth String
-      bnb String
-      usdt String
-      btc String
-      matic String
-
-   user VerifiedUser @relation(fields: [id], references: [id], onDelete: Cascade)
+      tron String?
+      eth String?
+      bnb String?
+      usdt String?
+      btc String?
+      matic String?
+      near String?
+      lpt String?
+      dot String?
+      user VerifiedUser @relation(fields: [userId], references: [userId], onDelete: Cascade)
 }
 
 model FiatAccount{
@@ -119,6 +127,20 @@ model Order {
   isCompleted Boolean
 
   user VerifiedUser @relation(fields: [id], references: [id], onDelete: Cascade)
+}
+
+model Trades {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  buyerId String
+  sellerId String
+  price String
+  createdAt DateTime @default(now())
+  value String
+  quantity String
+  tradeSymbolFirst String
+  tradeSymbolSecond String
+  status String
+  isCompleted Boolean
 }
 
 model CryptoTransaction {

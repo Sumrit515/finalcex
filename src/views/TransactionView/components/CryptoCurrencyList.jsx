@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 import Image from 'next/image';
 import {Button} from '../../../components/ui/button';
 import axios from 'axios';
-import { TransferFundsModal } from '../../../components/modals/TransferFunds';
+
 import toast from 'react-hot-toast';
 
 
@@ -68,15 +68,7 @@ useEffect(() => {
 
   return (
 <>
-<TransferFundsModal
-amount={amount}
-setAmount={setAmount}
-wallet="Spot"
-currency={symbol}
-onSubmit={() => transferToTradingWallet(amount)}
-isOpen={isOpen}
-onClose={() => setIsOpen(false)}
-/>
+
 <div className='
     flex
     flex-row

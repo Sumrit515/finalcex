@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import { useFetchTradingWalletBalance } from "../../../hooks/useFetchCryptoTransactions";
 import { useQuery } from "react-query";
 import PlaceOrderSplit from "./PlaceOrderSplit";
+import { PRICEURL, coingecko } from "../../../constant/constant";
 
 // interface PlaceOrderProps {
 //   tradeSymbolFirst ?: string;
@@ -37,16 +38,21 @@ const PlaceOrder = ({
   useEffect(() => {
     const fetch =async () =>{
       try{
-        const res = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=${tradeSymbolFirst?.toUpperCase()}${tradeSymbolSecond?.toUpperCase()}`)
+        
+        const res = await axios.get(`${PRICEURL}?ids=${coingecko[tradeSymbolFirst]}&vs_currencies=usd`)
         //  console.log(res?.data)
-        const response = await axios.get(`http://localhost:3000/api/fetch-user-tradingwallet`)
+        // const response = await axios.get(`http://localhost:3000/api/fetch-user-tradingwallet`)
         // setAvailableBalanceFirstSymbol(response.data[tradeSymbolSecond?.toLowerCase() || "usdt"])
         //   setAvailableBalanceSecondSymbol(response.data[tradeSymbolSecond?.toLowerCase() || "usdt"])
           //  console.warn(tradeSymbolSecond?.toLowerCase())
+          console.log(data)
+          const firstSymbol = coingecko[tradeSymbolFirst]
+          const secondSymbol = coingecko[tradeSymbolSecond]
           setAvailableBalanceFirstSymbol(data[tradeSymbolFirst?.toLowerCase()])
           setAvailableBalanceSecondSymbol(data[tradeSymbolSecond?.toLowerCase()])
-          setBuyPrice(Number(res?.data?.price).toFixed(3))
-          setSellPrice(Number(res?.data?.price).toFixed(3))
+      
+          setBuyPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))
+          setSellPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))
       }catch(e){
         console.log(e)
       }
@@ -61,9 +67,11 @@ fetch()
       setIsLoading(true)
       // alert(Number(quantity)>0)
    try{
-    const res = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=${tradeSymbolFirst?.toUpperCase()}${tradeSymbolSecond?.toUpperCase()}`)
+    const res = await axios.get(`${PRICEURL}?ids=${coingecko[tradeSymbolFirst]}&vs_currencies=usd`)
+    const firstSymbol = coingecko[tradeSymbolFirst]
+    const secondSymbol = coingecko[tradeSymbolSecond]
     if(availableBalanceSecondSymbol > 0) {
-       const total = (Number(buyQuantity) * Number(Number(res?.data?.price).toFixed(3)))?.toFixed(4)
+       const total = (Number(buyQuantity) * Number(Number(res?.data?.[firstSymbol].usd).toFixed(3)))?.toFixed(4)
       // alert(total)
         if(Number(availableBalanceSecondSymbol) > Number(total)){
          
@@ -72,13 +80,13 @@ fetch()
       
                 
           //  console.log(res?.data)
-          setBuyPrice(Number(res?.data?.price).toFixed(3))
-                setSellPrice(Number(res?.data?.price).toFixed(3))
+          setBuyPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))
+                setSellPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))
               //  console.log(price)
                 const data = {
                   type: "buy",
-                  price:   Number(res?.data?.price).toFixed(3)  ,
-                  value: (Number(buyQuantity) * Number(Number(res?.data?.price).toFixed(3)))?.toFixed(4),
+                  price:   Number(res?.data?.[firstSymbol].usd).toFixed(3)  ,
+                  value: (Number(buyQuantity) * Number(Number(res?.data?.[firstSymbol].usd).toFixed(3)))?.toFixed(4),
                   quantity: buyQuantity.toString() ,
                   tradeSymbolFirst: tradeSymbolFirst.toLowerCase(),
                   tradeSymbolSecond: tradeSymbolSecond.toLowerCase(),
@@ -103,7 +111,7 @@ fetch()
          
       
         } else{
-          toast.error(`Insufficient ${tradeSymbolSecond} one Balance`)
+          toast.error(`Insufficient ${tradeSymbolSecond} Balance`)
         }
     } else {
       toast.error(`Insufficient ${tradeSymbolSecond} Balance`)
@@ -126,23 +134,29 @@ fetch()
   }
   const onSell = async () => {
     setIsLoading(true)
-
+   
     try{
 
-      const res = await axios.get(`https://api.binance.com/api/v3/ticker/price?symbol=${tradeSymbolFirst?.toUpperCase()}${tradeSymbolSecond?.toUpperCase()}`)
+      const res = await axios.get(`${PRICEURL}?ids=${coingecko[tradeSymbolFirst]}&vs_currencies=usd`)
+      const firstSymbol = coingecko[tradeSymbolFirst]
+      const secondSymbol = coingecko[tradeSymbolSecond]
       //  console.log(res?.data)
-      setBuyPrice(Number(res?.data?.price).toFixed(3))
-      setSellPrice(Number(res?.data?.price).toFixed(3))
-      console.log(price)
-      const data = {
-        type: "sell",
-        amount: (Number(sellQuantity) * Number(Number(res?.data?.price).toFixed(3)))?.toFixed(4),
-        quantity: sellQuantity.toString() ,
-        symbol: `${tradeSymbolFirst?.toLowerCase()}_${tradeSymbolSecond?.toLowerCase()}`,
-        status: 'pending',
-        orderType: selectMarket? "market" : "limit" ,
-        isCompleted: false
-            }
+      setBuyPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))
+      setSellPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))
+      // console.log(price)
+   
+
+            const data = {
+              type: "sell",
+              price:   Number(res?.data?.[firstSymbol].usd).toFixed(3)  ,
+              value: (Number(buyQuantity) * Number(Number(res?.data?.[firstSymbol].usd).toFixed(3)))?.toFixed(4),
+              quantity: sellQuantity.toString() ,
+              tradeSymbolFirst: tradeSymbolFirst.toLowerCase(),
+              tradeSymbolSecond: tradeSymbolSecond.toLowerCase(),
+              status: 'pending',
+              orderType: selectMarket? "market" : "limit" ,
+              isCompleted: false
+                  }
       
             await axios.post(`/api/order`, data)
       

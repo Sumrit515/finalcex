@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   
 
 
-const { userId } = getAuth(req)
+    const { userId } = getAuth(req)
 
   
     const id = userId?.toString() 

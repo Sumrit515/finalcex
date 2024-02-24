@@ -1,3 +1,4 @@
+
 import { StoreModal } from "../components/modals/storeModal";
 import { useEffect, useState } from "react";
 
@@ -15,6 +16,7 @@ export const ModalProvider = () => {
     return(
         <> 
         <StoreModal />
+    
         </>
     )
 }

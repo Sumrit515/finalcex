@@ -9,14 +9,18 @@ const WalletBalance = ({
     name,
     symbol,
     logo,
-    isLoading
+    isLoading,
+    setSelectSymbol,
+    setSelectName
 }) => {
 
   const transferFundsModal = useTransferFundsModal()
-
+  
   return (
-    <div className='flex flex-col gap-8 w-36 h-48 border-[1px] border-gray-800 rounded-xl p-4  cursor-pointer overflow-hidden'>
-      {!isLoading ? <p className='text-center text-3xl'>{balance.toString().length > 4 ? `${balance.toString().substring(0,5)}..` : balance}</p> : <SkeletonLoader/>}
+    <>
+    
+     <div className='flex flex-col gap-8 w-48 h-48 border-[1px] border-gray-800 rounded-xl p-4  cursor-pointer overflow-hidden'>
+      {!isLoading ? <p className='text-center text-3xl'>{balance.toString().length > 4 ? `${balance.toString().substring(0,8)}..` : balance}</p> : <SkeletonLoader/>}
         <div className='flex flex-row justify-center gap-6 items-center'>
          <Image
          className='w-6 h-6'
@@ -27,11 +31,13 @@ const WalletBalance = ({
          />
          <p className='text-lg'>{symbol}</p>
         </div>
-        <Button onClick={() => transferFundsModal.onOpen()}>
+        <Button onClick={() => { setSelectSymbol(symbol) ; transferFundsModal.onOpen(); setSelectName(name)} }>
           Transfer
         </Button>
         
     </div>
+    </>
+   
   )
 }
 

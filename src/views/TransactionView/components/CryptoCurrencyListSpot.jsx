@@ -5,7 +5,7 @@ import Image from 'next/image';
 import {Button} from '../../../components/ui/button';
 import { useTransferFundsModal } from '../../../hooks/useTransferFundsModal';
 
-import { TransferFundsModal } from '../../../components/modals/TransferFunds';
+
 import toast from 'react-hot-toast';
 
 // interface CryptoCurrencyListSpotProps {
@@ -76,15 +76,9 @@ useEffect(() => {
 
   return (
 <>
-<TransferFundsModal
-amount={amount}
-setAmount={setAmount}
-wallet="Crypto"
-currency={symbol}
-onSubmit={() => transferToCryptoWallet(amount)}
-isOpen={isOpen}
-onClose={() => setIsOpen(false)}
-/>
+
+
+
 <div className='
     flex
     flex-row

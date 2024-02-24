@@ -16,7 +16,8 @@ import { store } from '../store/store'
 import { ClerkProvider, useAuth } from '@clerk/nextjs'
 import Footer from '../components/Footer'
 import axios from 'axios'
-import { TransferFundsModal } from '../components/modals/TransferFunds'
+
+import { Modal } from '../components/ui/modal'
 
 
 
@@ -76,12 +77,12 @@ export default function App({ Component, pageProps: {session, ...pageProps} }) {
     <ThemeProvider attribute="class">
     
     <Navbar/>
-    <TransferFundsModal/>
+   
     
   <Component {...pageProps} />
    <Footer/>
   </ThemeProvider>
-
+  
   </SessionProvider>
   </Provider>
   </QueryClientProvider>

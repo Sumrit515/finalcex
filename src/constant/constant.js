@@ -102,3 +102,36 @@ export const blockchainApis = {
         usdtUrlPart3 : ``
     }
 }
+
+export const wallets = [
+    {
+        label : "Spot",
+        value : "spot"
+    },
+    {
+        label : "Crypto",
+        value : "crypto"
+    },
+]
+
+export const urlArray = {
+    "binance" : "https://rpc.ankr.com/bsc_testnet_chapel/9aad3f3df6af36fabc9cbaeceb321826af47cf41306e8fb8f31621100b318c01",
+    "polygon" : "",
+    "ethereum" : "",
+    "tron" : "",
+    "usdt" : ""
+}
+
+export const PRICEURL = "https://api.coingecko.com/api/v3/simple/price"
+
+export const coingecko = {
+    BNB : "binancecoin",
+    BTC : "bitcoin",
+    ETH : "ethereum",
+    TRX :  "tron" ,
+    MATIC : "matic-network" ,
+    DOT : "binance-peg-polkadot" ,
+    LPT : "livepeer",
+    NEAR : "near"
+
+}

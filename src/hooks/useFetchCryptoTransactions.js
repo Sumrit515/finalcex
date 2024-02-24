@@ -1,4 +1,5 @@
 import axios from 'axios'
+import toast from 'react-hot-toast'
 
 
 export const useFetchCryptoTransactions = async () => {
@@ -66,4 +67,18 @@ export const useFetchUserCryptoBalance = async () => {
           return e
         } 
    
+}
+
+export const useFetchUserSpotBalance = async () => {
+  try {
+  
+  const {data} = await axios.get(`/api/fetch-user-spot-balance`)
+  console.log(data)
+  return data
+
+  } catch(e) {
+    toast.error("Failed to fetch balance")
+    console.log("[FETCH_SPOT_BALANCE]",e)
+    return e
+  }
 }

@@ -7,17 +7,30 @@ import SpotBalance from '../../../views/TransactionView/components/SpotBalance'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useQuery } from 'react-query'
-import { useFetchUserCryptoBalance } from '../../../hooks/useFetchCryptoTransactions'
+import { useFetchUserCryptoBalance, useFetchUserSpotBalance } from '../../../hooks/useFetchCryptoTransactions'
+import { TransferFundsModal } from '../../../components/modals/TransferFunds'
+import { Button } from '../../../components/ui/button'
+import {useRouter} from "next/navigation"
+import { useTransferFundsModal } from '../../../hooks/useTransferFundsModal'
 
 const FundsView = () => {
 
   const { data, error, isLoading } = useQuery('posts', useFetchUserCryptoBalance, {
     refetchInterval: 5000, // 10 seconds in milliseconds
   });
+  const spotBalance = useQuery('pos', useFetchUserSpotBalance, {
+    refetchInterval: 5000, // 10 seconds in milliseconds
+  });
 
 
- 
-  const [balanceData, setBalanceData] = useState( [
+
+
+  const [selectFirstWallet, setSelectFirstWallet] = useState("crypto")
+  const [selectSecondWallet, setSelectSecondWallet] = useState("spot")
+  const [selectSymbol, setSelectSymbol] = useState("USDT")
+  const [selectName, setSelectName] = useState("USDT")
+  const [amount, setAmount] = useState(0)
+  const [balanceData, setBalanceData] = useState([
     {
         "networkName" : "Ethereum",
         "currencySymbol" : "ETH",
@@ -53,34 +66,98 @@ const FundsView = () => {
         "currencyLogo" : "/images/CryptoLogos/usdt.png",
         "balance" : 0
     }
-])
-
-
+  ])
   
+  const router = useRouter()
+  const transferFundsModal = useTransferFundsModal()
+
+  const onCreate = async () => {
+    try {
+       const {data} = await axios.post(`/api/create-user-spot-wallet`)
+       console.log(data)
+     
+    } catch(e) {
+      console.log(e)
+    }
+  }
+
+  const onTransfer = async () => {
+    try {
+      const body = {
+        from : "selectFirstWallet",
+        to : "selectSecondWallet",
+        name : selectName,
+      }
+     const {data} = await axios.post(`/api/transfer-funds`, body)
+     console.log(data)
+     transferFundsModal?.onClose()
+    } catch(e) {
+      console.log(e)
+    }
+  }
+
   
   return (
-    <div className='
-    p-8
-    '>
+    <>
+    <TransferFundsModal
+    onSubmit={onTransfer}
+    selectSymbol={selectSymbol}
+    setSelectSymbol={setSelectSymbol}
+    selectFirstWallet={selectFirstWallet}
+    setSelectFirstWallet={setSelectFirstWallet}
+    selectSecondWallet={selectSecondWallet}
+    setSelectSecondWallet={setSelectSecondWallet}
+    amount={amount}
+    setAmount={setAmount}
+    />
+      <div className='
+      p-8
+      '>
       <p className='mb-4'>Assets</p>
       <TotalBalance
       balance={50}
       />
-
-      <p className='my-4'>Crypto Wallet</p>
-     
-     <div className='flex flex-wrap gap-8'>
-     {currencyDetailsArray?.map((currency, i) => (
-        <WalletBalance
-        key={data?.[i].networkName  ?? currency.networkName}
-        balance={data?.[i].balance ?? 0}
-        name={currency.currencyName}
-        symbol={currency.currencySymbol}
-        logo={currency.currencyLogo}
-        isLoading={isLoading}
-        />
-     ))}
+     <div>
+        <p className='my-4'>Crypto Wallet</p>
+        
+        <div className='flex flex-wrap gap-8'>
+        {currencyDetailsArray?.map((currency, i) => (
+            <WalletBalance
+            key={data?.[i].networkName  ?? currency.networkName}
+            setSelectSymbol={setSelectSymbol}
+            setSelectName={setSelectName}
+            balance={data?.[i].balance ?? 0}
+            name={currency.currencyName}
+            symbol={currency.currencySymbol}
+            logo={currency.currencyLogo}
+            isLoading={isLoading}
+            set
+            />
+        ))}
+        </div>
      </div>
+     <div>
+
+        <p className='my-4'>Spot Wallet</p>
+        
+        <div className='flex flex-wrap gap-8'>
+        {currencyDetailsArray?.map((currency, i) => (
+
+            <WalletBalance
+            key={spotBalance?.data?.[i]?.networkName  ?? currency.networkName}
+            setSelectSymbol={setSelectSymbol}
+            setSelectName={setSelectName}
+            balance={spotBalance?.data?.[i]?.balance ?? 0}
+            name={currency.currencyName}
+            symbol={currency.currencySymbol}
+            logo={currency.currencyLogo}
+            isLoading={spotBalance?.isLoading}
+            />
+        ))}
+        </div>
+    
+     </div>
+     
      
     
 
@@ -98,6 +175,8 @@ p-8
   <SpotBalance/>
 </div> */}
     </div>
+    </>
+  
   )
 }
 
