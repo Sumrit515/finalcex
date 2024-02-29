@@ -5,7 +5,8 @@ const nextConfig = {
     domains: [
       "res.cloudinary.com",
       "tailwindui.com",
-      "img.clerk.com"
+      "img.clerk.com",
+      "utfs.io"
     ],
   }
 }

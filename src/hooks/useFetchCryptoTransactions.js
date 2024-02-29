@@ -42,6 +42,12 @@ return data
 
 }
 
+export const useFetchTokenList = async () => {
+  const resp = await axios.get("/api/fetch-token-list")
+  // console.log('[HOOKS_FETCH_TOKENS_LIST]',resp.data)
+  return resp.data.tokenList;
+}
+
 export const useFetchTradingWalletBalance = async () => {
     let response ={}
     try{

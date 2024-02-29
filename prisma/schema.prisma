@@ -102,29 +102,34 @@ model CryptoAccount{
 
 model Tokens {
   id String @id @default(auto()) @map("_id") @db.ObjectId
+  label String
   symbol String
   price String
   volume String
   change String
   totalSupply String
-  tradable String
+  tradable Boolean
+  createdAt  DateTime @default(now())
+  name String
+  src String
+  link String
+  dataSrc String
 }
-
 
 
 model Order {
   id String @id @default(auto()) @map("_id") @db.ObjectId
   userId String
-  price String
+  price String?
   placedAt DateTime @default(now())
-  type String
-  value String
-  quantity String
-  tradeSymbolFirst String
-  tradeSymbolSecond String
-  status String
-  orderType String
-  isCompleted Boolean
+  type String?
+  value String?
+  quantity String?
+  tradeSymbolFirst String?
+  tradeSymbolSecond String?
+  status String?
+  orderType String?
+  isCompleted Boolean?
 
   user VerifiedUser @relation(fields: [id], references: [id], onDelete: Cascade)
 }

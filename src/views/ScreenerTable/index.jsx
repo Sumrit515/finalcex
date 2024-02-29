@@ -11,6 +11,9 @@ import {
     TableRow,
   } from "../../components/ui/table"
 import Row from "./components/Row";
+import { useQuery } from "react-query";
+import { useFetchTokenList } from "../../hooks/useFetchCryptoTransactions";
+import RowPersonal from "./components/RowPersonal";
   
 
 // interface ScreenerTableProps {
@@ -22,10 +25,14 @@ const ScreenerTable = ({
     isFull,
     isCaption
 }) => {
+    
+    const { data, error, isLoading } = useQuery('tokens', useFetchTokenList,{
+        refetchInterval: 5000, // 10 seconds in milliseconds
+      });
 
     // const socketRef = useRef<WebSocket | null>(null);
     // const [socketData, setSocketData] = useState<{ c: number; p: number, q: number, v: number, h: number, l: number , s: string}>({ c: 0, p: 0, q: 0,v: 0, h:0, l:0, s: "" });
-    const data = [
+    const dummyData = [
         {
             id: "1",
             label: "btcusdt@ticker",
@@ -127,8 +134,6 @@ const ScreenerTable = ({
 
 
 
-
-
   return (
     <div className="mx-auto ">
    {/* <DataTable
@@ -160,8 +165,16 @@ const ScreenerTable = ({
   </TableHeader>
   <TableBody>
     {
-        data?.map((item, i) => (
+       data && data?.map((item, i) => (
+        item.dataSrc === "binance" ? 
             <Row
+            isFull={isFull}
+            key={i}
+            id={i}
+            tableData={item}
+            /> 
+            :
+            <RowPersonal
             isFull={isFull}
             key={i}
             id={i}
