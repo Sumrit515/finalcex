@@ -13,6 +13,7 @@ import PlaceOrder from './components/PlaceOrder'
 import TradeHistory from './components/TradeHistory'
 import OrderBookMain from './components/OrderBookMain'
 import 'bootstrap/dist/css/bootstrap.css'
+import HeaderTickerMiddleware from './components/HeaderTickerMiddleware'
 
 
 
@@ -133,7 +134,7 @@ if(
                             
                             block
                             w-full'>
-                            <HeaderTicker
+                            <HeaderTickerMiddleware
                             tradeSymbol={tradeSymbol}/>
                             </div>
                        

@@ -208,8 +208,8 @@ while(newBuyOrders.length > 0 && newSellorders.length > 0){
     if(Number(bestSellOrder.price) >= Number(bestBuyOrder.price)){
         const tradeQuantity = Math.min(Number(bestBuyOrder.quantity), Number(bestSellOrder.quantity))
 
-        bestBuyOrder.quantity =( Number(bestBuyOrder.quantity) - tradeQuantity).toString()
-        bestSellOrder.quantity = (Number(bestSellOrder.quantity) - tradeQuantity).toString()
+        bestBuyOrder.quantity = ( Number(bestBuyOrder.quantity) - tradeQuantity).toString()
+        bestSellOrder.quantity = ( Number(bestSellOrder.quantity) - tradeQuantity).toString()
 
         const trade = {
             buyer: bestBuyOrder.userId,

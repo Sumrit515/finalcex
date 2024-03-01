@@ -38,14 +38,14 @@ const RowPersonal = ({
     const [socketData, setSocketData] = useState({ c: 0, p: 0, q: 0,v: 0, h:0, l:0, s: "" });
     const [isLoading, setIsLoading] = useState(false)
       useEffect(() => {
-        console.log("I am in personal")
+        //console.log("I am in personal")
         // socketRef.current = new WebSocket('wss://data-stream.binance.vision/ws');
         // const socket = socketRef?.current;
         const socket = io("http://localhost:3005")
         setIsLoading(true)
         
         socket.on(`message:${tableData.label}`, (message) => {
-          console.log(message)
+         // console.log(message)
       })
       
       // setSocket(socket)

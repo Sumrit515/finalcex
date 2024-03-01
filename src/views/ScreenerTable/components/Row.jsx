@@ -30,8 +30,8 @@ const Row = ({
     isFull,
 }) => {
 
-  const router = useRouter()
-  const nouter = newRouter()
+    const router = useRouter()
+    const nouter = newRouter()
     const socketRef = useRef(null);
     const [socketData, setSocketData] = useState({ c: 0, p: 0, q: 0,v: 0, h:0, l:0, s: "" });
     const [isLoading, setIsLoading] = useState(false)
@@ -55,7 +55,7 @@ const Row = ({
       
           const handleWebSocketMessage = (event) => {
             const message = JSON.parse(event.data);
-      console.log("[SOCKET_MESSAGE]",message)
+      //console.log("[SOCKET_MESSAGE]",message)
               setSocketData(JSON.parse(event.data));
              setIsLoading(false)
           };
