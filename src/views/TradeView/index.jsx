@@ -131,7 +131,6 @@ if(
                       justify-between
                       items-center'>
                             <div className='
-                            
                             block
                             w-full'>
                             <HeaderTickerMiddleware

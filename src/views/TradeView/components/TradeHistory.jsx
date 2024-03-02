@@ -1,5 +1,11 @@
 
 import React,{useState} from 'react'
+import OpenOrder from './trade-history/open-orders/open-order'
+import FilledOrders from './trade-history/filled-orders/filled-orders'
+import Trades from './Trades'
+import RenderTrades from './trade-history/trades/trades'
+
+
 
 
 // enum to switch between order history, trade history, open order, and the funds of the users.
@@ -22,50 +28,14 @@ const TradeHistory = () => {
 
     let bodyContent = (
         <>
-         <div class="table-responsive">
-                                <table class="table">
-
-        <thead>
-                                        <tr>
-        
-<th>
-Date    
-</th>
-<th>
-Pair
-</th>
-<th>
-Type
-</th>
-<th>
-Side
-</th>
-<th>
-Price
-</th>
-<th>
-Amount
-</th>
-<th>
-Total
-</th>
-
-    </tr>
-   
-    </thead>
-    </table>
-    </div>
-
-
+   <OpenOrder/>
         </>
     )
 
     if(step === STEPS.ORDERHISTORY){
         bodyContent = (
             <>
-            <div>
-                Order History
-            </div>
+         <FilledOrders/>
             </>
         )
     }
@@ -73,9 +43,7 @@ Total
    if(step === STEPS.TRADEHISTORY){
         bodyContent = (
             <>
-            <div>
-                Trade History
-            </div>
+           <RenderTrades/>
             </>
         )
     }
@@ -106,38 +74,41 @@ justify-between
         <div
 
         onClick={() => setStep(STEPS.OPENORDER)}
-        className='
-      
+        className={`
+         ${step === STEPS.OPENORDER ? 'text-purple-700' : ""}
         hover:text-purple-500
         hover:cursor-pointer
-        '
+    `}
         >
 Open Orders
         </div>
         <div
                 onClick={() => setStep(STEPS.ORDERHISTORY)}
-            className='
-            hover:text-purple-500
-            hover:cursor-pointer
-            '
+            className={`
+            ${step === STEPS.ORDERHISTORY ? 'text-purple-700' : ""}
+           hover:text-purple-500
+           hover:cursor-pointer
+       `}
         >
 Order History
         </div>
         <div
                 onClick={() => setStep(STEPS.TRADEHISTORY)}
-            className='
-            hover:text-purple-500
-            hover:cursor-pointer
-            '
+            className={`
+            ${step === STEPS.TRADEHISTORY ? 'text-purple-700' : ""}
+           hover:text-purple-500
+           hover:cursor-pointer
+       `}
         >
 Trade History
         </div>
         <div
                 onClick={() => setStep(STEPS.FUNDS)}
-            className='
-            hover:text-purple-500
-            hover:cursor-pointer
-            '
+            className={`
+            ${step === STEPS.FUNDS ? 'text-purple-700' : ""}
+           hover:text-purple-500
+           hover:cursor-pointer
+       `}
         >
 Funds
         </div>

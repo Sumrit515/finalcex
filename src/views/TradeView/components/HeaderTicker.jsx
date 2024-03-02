@@ -36,7 +36,7 @@ const symbol = parts?.map(part => part.toLowerCase()).join("");
       
           const handleWebSocketMessage = (event) => {
             const message = JSON.parse(event.data);
-      // console.log(message)
+       console.log('[HEADER_TICKER]',message)
               setData(JSON.parse(event.data));
          setIsLoading(false)
           };

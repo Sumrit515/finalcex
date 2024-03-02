@@ -34,7 +34,7 @@ const HeaderTickerMiddleware = ({
     return <HeaderTickerPersonal tradeSymbol={tradeSymbol}/>
 
     if(tickerType === "binance") 
-    return <HeaderTicker/>
+    return <HeaderTicker tradeSymbol={tradeSymbol}/>
 
 
 }
