@@ -40,13 +40,13 @@ const TradeTable = () => {
 
     const dummyData = [{
 
-    "id" :"65e2c881257f78113c1121ba",
-    "createdAt " : "1.084",
-    "tradeSymbolFirst" : "2024-03-02T06:34:41.703+00:00",
-    "status" : "1.0840",
-    "price" : "0",
-    "quantity" : "matic",
-    "value" : "usdt",
+    "id" :"",
+    "createdAt " : "",
+    "tradeSymbolFirst" : "",
+    "status" : "",
+    "price" : "",
+    "quantity" : "",
+    "value" : "",
 
     }]
 

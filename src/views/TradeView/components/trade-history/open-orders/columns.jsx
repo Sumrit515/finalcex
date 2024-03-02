@@ -18,6 +18,18 @@ export const columns = [
     header: "Trading Pair",
   },
   {
+    accessorKey: "quantity",
+    header: "Quanity",
+  },
+  {
+    accessorKey: "price",
+    header: "Order Price",
+  },
+  {
+    accessorKey: "value",
+    header: "Order Value",
+  },
+  {
     accessorKey: "type",
     header: "Type",
   },

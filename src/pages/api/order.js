@@ -58,7 +58,7 @@ let newWallet
             userId: id.toString() , // Replace 'specificType' with your desired type
           },
           data: {
-            usdt : newBalance.toString() , // Update the username field
+            [tradeSymbolSecond] : newBalance.toString() , // Update the username field
           },
           
   
@@ -73,6 +73,41 @@ let newWallet
      
 
     }
+    if(type === "sell"){
+
+      const wallet = await prismadb.spotWallet.findFirst({
+         where: {
+           userId: id
+         }
+       })
+ 
+ 
+       let balance = wallet[tradeSymbolFirst.toLowerCase()]
+ 
+       if(Number(balance) > Number(value)){
+         console.log(balance, wallet, value)
+         let newBalance = Number(balance) - Number(value)
+   
+         const updateBalance = await prismadb.spotWallet.update({
+           where: {
+             userId: id.toString() , // Replace 'specificType' with your desired type
+           },
+           data: {
+             [tradeSymbolFirst] : newBalance.toString() , // Update the username field
+           },
+           
+   
+         })
+      
+   
+         newWallet = updateBalance
+       }
+       else{
+         return res.status(500).json({ error: `Something went wrong` });
+       }
+      
+ 
+     }
 
 
     const order = await prismadb.order.create({

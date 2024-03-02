@@ -149,7 +149,7 @@ fetch()
             const data = {
               type: "sell",
               price:   Number(res?.data?.[firstSymbol].usd).toFixed(3)  ,
-              value: (Number(buyQuantity) * Number(Number(res?.data?.[firstSymbol].usd).toFixed(3)))?.toFixed(4),
+              value: sellQuantity?.toString() ,
               quantity: sellQuantity.toString() ,
               tradeSymbolFirst: tradeSymbolFirst.toLowerCase(),
               tradeSymbolSecond: tradeSymbolSecond.toLowerCase(),

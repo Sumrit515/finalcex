@@ -1,7 +1,7 @@
 "use client"
 
+import { ColumnDef } from "@tanstack/react-table"
 import FormatDateRender from "../../../../../components/FormatDateRender"
-
 
 export const columns = [
   {
@@ -16,6 +16,14 @@ export const columns = [
   {
     accessorKey: "tradeSymbolFirst",
     header: "Trading Pair",
+  },
+  {
+    accessorKey: "quantity",
+    header: "Quanity",
+  },
+  {
+    accessorKey: "price",
+    header: "Order Price",
   },
   {
     accessorKey: "type",
