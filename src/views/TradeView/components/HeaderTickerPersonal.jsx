@@ -47,9 +47,6 @@ const HeaderTickerPersonal = ({
      
     }, [tradeSymbol])
 
-
-
-
   return (
 
     <>

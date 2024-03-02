@@ -1,5 +1,7 @@
 "use client"
 
+import FormatDateRender from "../../../../../components/FormatDateRender"
+
 
 export const columns = [
   {
@@ -9,6 +11,7 @@ export const columns = [
   {
     accessorKey: "createdAt",
     header: "Trade Time",
+    cell : ({row}) => <FormatDateRender data={row?.original?.createdAt}/>
   },
   {
     accessorKey: "tradeSymbolFirst",
