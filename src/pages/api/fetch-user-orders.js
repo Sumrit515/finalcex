@@ -42,6 +42,9 @@ export default async function handler(req, res) {
         status : {
             in: orderStatusCheckArray
         }
+       },
+       orderBy : {
+        placedAt: "desc"
        }
     })
 

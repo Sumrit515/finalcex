@@ -31,6 +31,9 @@ export default async function handler(req, res) {
                 { buyerId: userId }, // Filter by buyerId
                 { sellerId: userId }, // Filter by sellerId
               ],
+        },
+        orderBy : {
+          createdAt: "desc"
         }
     })
 
