@@ -42,23 +42,18 @@ model VerifiedUser{
   cryptoTransaction CryptoTransaction[]
   cryptoAccount CryptoAccount[]
   fiatAccount FiatAccount[]
-  spotWallet SpotWallet?
+
   fiatTransaction FiatTransaction[]
 }
 
 model SpotWallet {
       id String @id @default(auto()) @map("_id") @db.ObjectId
-      userId String @unique
-      tron String?
-      eth String?
-      bnb String?
-      usdt String?
-      btc String?
-      matic String?
-      near String?
-      lpt String?
-      dot String?
-      user VerifiedUser @relation(fields: [userId], references: [userId], onDelete: Cascade)
+      userId String 
+      symbol String
+      name String
+      balance String
+      avgPrice String
+      logo String
 }
 
 model FiatAccount{

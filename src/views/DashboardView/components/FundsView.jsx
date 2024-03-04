@@ -99,6 +99,7 @@ const FundsView = () => {
   
   return (
     <>
+    <Button onClick={() => onCreate()}> create</Button>
     <TransferFundsModal
     onSubmit={onTransfer}
     selectSymbol={selectSymbol}
@@ -141,16 +142,16 @@ const FundsView = () => {
         <p className='my-4'>Spot Wallet</p>
         
         <div className='flex flex-wrap gap-8'>
-        {currencyDetailsArray?.map((currency, i) => (
+        {spotBalance?.data && spotBalance?.data?.map((currency, i) => (
 
             <WalletBalance
-            key={spotBalance?.data?.[i]?.networkName  ?? currency.networkName}
+            key={currency.symbol  ?? currency.networkName}
             setSelectSymbol={setSelectSymbol}
             setSelectName={setSelectName}
-            balance={spotBalance?.data?.[i]?.balance ?? 0}
-            name={currency.currencyName}
-            symbol={currency.currencySymbol}
-            logo={currency.currencyLogo}
+            balance={currency.balance ?? "0"}
+            name={currency.name}
+            symbol={currency.symbol}
+            logo={currency.logo}
             isLoading={spotBalance?.isLoading}
             />
         ))}

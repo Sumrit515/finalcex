@@ -63,20 +63,48 @@ export default async function handler(req, res) {
      }
  
    
+const getAllTokens = await prismadb.tokens.findMany()
 
+// id String @id @default(auto()) @map("_id") @db.ObjectId
+// userId String 
+// symbol String
+// name String
+// balance String
+// avgPrice String
 
-   const userSpotWallet = await prismadb.spotWallet.create({data :{
-    userId : userDetails.id,
-    tron: 0,
-    eth: 0,
-    btc: 0,
-    matic: 0,
-    usdt: 0,
-    bnb: 0
-   }})
+const usdtUserWallet =  await prismadb.spotWallet.create({data: {
+  userId : userDetails.id,
+  symbol: "USDT",
+  name: "USDT",
+  avgPrice: "1",
+  balance: "0",
+  logo: "/images/CryptoLogos/binance.png"
+ }})
+
+const userSpotWallets = getAllTokens?.map(async (token) => {
+ const userWallet = await prismadb.spotWallet.create({data: {
+  userId : userDetails.id,
+  symbol: token.symbol,
+  name: token.name,
+  avgPrice: "0",
+  balance: "0",
+  logo: token.src
+ }})
+ return userWallet
+})
+
+  //  const userSpotWallet = await prismadb.spotWallet.create({data :{
+  //   userId : userDetails.id,
+  //   tron: 0,
+  //   eth: 0,
+  //   btc: 0,
+  //   matic: 0,
+  //   usdt: 0,
+  //   bnb: 0
+  //  }})
 
  
-      return res.status(200).json({userSpotWallet});
+      return res.status(200).json({userSpotWallets});
       
 
     } 

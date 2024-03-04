@@ -42,12 +42,13 @@ let newWallet
 
      const wallet = await prismadb.spotWallet.findFirst({
         where: {
-          userId: id
+          userId: id,
+          symbol : tradeSymbolSecond.toUpperCase()
         }
       })
 
 
-      let balance = wallet[tradeSymbolSecond.toLowerCase()]
+      let balance = wallet.balance
 
       if(Number(balance) > Number(value)){
         console.log(balance, wallet, value)
@@ -55,10 +56,12 @@ let newWallet
   
         const updateBalance = await prismadb.spotWallet.update({
           where: {
-            userId: id.toString() , // Replace 'specificType' with your desired type
+            id: wallet.id,
+            userId: id.toString()  // Replace 'specificType' with your desired type
+            
           },
           data: {
-            [tradeSymbolSecond] : newBalance.toString() , // Update the username field
+            balance : newBalance.toString() , // Update the username field
           },
           
   
@@ -77,12 +80,13 @@ let newWallet
 
       const wallet = await prismadb.spotWallet.findFirst({
          where: {
-           userId: id
+           userId: id,
+           symbol : tradeSymbolFirst.toUpperCase()
          }
        })
  
  
-       let balance = wallet[tradeSymbolFirst.toLowerCase()]
+       let balance = wallet.balance
  
        if(Number(balance) > Number(value)){
          console.log(balance, wallet, value)
@@ -90,10 +94,12 @@ let newWallet
    
          const updateBalance = await prismadb.spotWallet.update({
            where: {
-             userId: id.toString() , // Replace 'specificType' with your desired type
+            id: wallet.id,
+            userId: id.toString() , // Replace 'specificType' with your desired type
+            
            },
            data: {
-             [tradeSymbolFirst] : newBalance.toString() , // Update the username field
+            balance : newBalance.toString() , // Update the username field
            },
            
    

@@ -51,8 +51,8 @@ export const useFetchTokenList = async () => {
 export const useFetchTradingWalletBalance = async () => {
     let response ={}
     try{
-       const{data} = await axios.get(`/api/fetch-user-tradingwallet`)
-    //    console.log(data)
+       const{data} = await axios.get(`/api/fetch-user-spot-balance`)
+     
        return data
     } catch(e){
         console.log(e)
@@ -79,7 +79,7 @@ export const useFetchUserSpotBalance = async () => {
   try {
   
   const {data} = await axios.get(`/api/fetch-user-spot-balance`)
-  console.log(data)
+  console.log('[SPOT_WALLET]',data)
   return data
 
   } catch(e) {

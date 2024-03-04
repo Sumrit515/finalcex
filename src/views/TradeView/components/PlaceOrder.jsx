@@ -32,7 +32,7 @@ const PlaceOrder = ({
   const [buyPrice, setBuyPrice] = useState("")
   const  [sellPrice, setSellPrice] = useState("")
   const [availableBalanceFirstSymbol, setAvailableBalanceFirstSymbol] = useState("0")
-  const [availableBalanceSecondSymbol, setAvailableBalanceSecondSymbol] = useState("0")
+  const [availableBalanceSecondSymbol, setAvailableBalanceSecondSymbol] = useState("100")
   
 
   useEffect(() => {
@@ -48,8 +48,12 @@ const PlaceOrder = ({
           console.log(data)
           const firstSymbol = coingecko[tradeSymbolFirst]
           const secondSymbol = coingecko[tradeSymbolSecond]
-          setAvailableBalanceFirstSymbol(data[tradeSymbolFirst?.toLowerCase()])
-          setAvailableBalanceSecondSymbol(data[tradeSymbolSecond?.toLowerCase()])
+        
+          const tradeSymbolFirstBalance = data?.filter((token)=> token.symbol === tradeSymbolFirst )
+          const tradeSymbolSecondBalance = data?.filter((token)=> token.symbol === tradeSymbolSecond )
+          
+          setAvailableBalanceFirstSymbol(tradeSymbolFirstBalance[0]?.balance)
+          setAvailableBalanceSecondSymbol(tradeSymbolSecondBalance[0]?.balance)
       
           setBuyPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))
           setSellPrice(Number(res?.data?.[firstSymbol].usd).toFixed(3))

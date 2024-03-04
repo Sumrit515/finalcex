@@ -29,7 +29,7 @@ export default async function handler(req, res) {
 
 
 
- const userSpotWallet = await prismadb.spotWallet.findFirst({
+ const userSpotWallets = await prismadb.spotWallet.findMany({
      where: {
          userId: id.toString() , // Replace 'specificType' with your desired type
        },
@@ -37,46 +37,46 @@ export default async function handler(req, res) {
    });
 
 
- const userSpotWalletArray = [
-    {
-        "networkName" : "Ethereum",
-        "currencySymbol" : "ETH",
-        "currencyName" : "Ethereum",
-        "currencyLogo" : "/images/CryptoLogos/ethereum.png",
-        "balance" : userSpotWallet?.eth
-    },
-     {
-        "networkName" : "Matic",
-        "currencySymbol" : "Matic",
-        "currencyName" : "Matic",
-        "currencyLogo" : "/images/CryptoLogos/polygon.png",
-        "balance" : userSpotWallet?.matic
-    }, 
-    {
-        "networkName" : "Binance Smart Chain (BSC)",
-        "currencySymbol" : "BNB",
-        "currencyName" : "BNB",
-        "currencyLogo" : "/images/CryptoLogos/binance.png",
-        "balance" : userSpotWallet?.bnb
-    },
-   {
-        "networkName" : "Tron",
-        "currencySymbol" : "TRX",
-        "currencyName" : "Tron",
-        "currencyLogo" : "/images/CryptoLogos/tron.png",
-        "balance" : userSpotWallet?.tron
-    },
-   {
-        "networkName" : "Tron",
-        "currencySymbol" : "USDT",
-        "currencyName" : "USDT",
-        "currencyLogo" : "/images/CryptoLogos/usdt.png",
-        "balance" : userSpotWallet?.usdt
-    }
-]
+//  const userSpotWalletArray = [
+//     {
+//         "networkName" : "Ethereum",
+//         "currencySymbol" : "ETH",
+//         "currencyName" : "Ethereum",
+//         "currencyLogo" : "/images/CryptoLogos/ethereum.png",
+//         "balance" : userSpotWallet?.eth
+//     },
+//      {
+//         "networkName" : "Matic",
+//         "currencySymbol" : "Matic",
+//         "currencyName" : "Matic",
+//         "currencyLogo" : "/images/CryptoLogos/polygon.png",
+//         "balance" : userSpotWallet?.matic
+//     }, 
+//     {
+//         "networkName" : "Binance Smart Chain (BSC)",
+//         "currencySymbol" : "BNB",
+//         "currencyName" : "BNB",
+//         "currencyLogo" : "/images/CryptoLogos/binance.png",
+//         "balance" : userSpotWallet?.bnb
+//     },
+//    {
+//         "networkName" : "Tron",
+//         "currencySymbol" : "TRX",
+//         "currencyName" : "Tron",
+//         "currencyLogo" : "/images/CryptoLogos/tron.png",
+//         "balance" : userSpotWallet?.tron
+//     },
+//    {
+//         "networkName" : "Tron",
+//         "currencySymbol" : "USDT",
+//         "currencyName" : "USDT",
+//         "currencyLogo" : "/images/CryptoLogos/usdt.png",
+//         "balance" : userSpotWallet?.usdt
+//     }
+// ]
 
 
-  return res.status(200).json(userSpotWalletArray);
+  return res.status(200).json(userSpotWallets);
     
 }  else{
         return res.status(405).end();
