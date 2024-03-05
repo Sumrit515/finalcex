@@ -41,7 +41,7 @@ const RowPersonal = ({
         //console.log("I am in personal")
         // socketRef.current = new WebSocket('wss://data-stream.binance.vision/ws');
         // const socket = socketRef?.current;
-        const socket = io("http://localhost:3005")
+        const socket = io("http://15.206.132.225:3005")
         setIsLoading(true)
         
         socket.on(`message:${tableData.label}`, (message) => {

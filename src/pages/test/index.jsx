@@ -13,7 +13,7 @@ const Test = () => {
     }
     
     useEffect(() => {
-        const socket = io("http://localhost:3005")
+        const socket = io("http://15.206.132.225:3005")
         
         socket.on("message", (message) => {
             console.log(message)

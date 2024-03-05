@@ -23,7 +23,7 @@ const HeaderTickerPersonal = ({
       const parts = tradeSymbol?.split("_");
       const symbol = parts?.map(part => part.toLowerCase()).join("");
      
-      const socket = io("http://localhost:3005")
+      const socket = io("http://15.206.132.225:3005")
       setIsLoading(true)
       
       socket.on(`message:${symbol}@ticker`, (message) => {
