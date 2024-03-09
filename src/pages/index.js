@@ -25,7 +25,18 @@ export default function Home() {
   const router = useRouter()
   const { isLoaded,userId, sessionId, getToken } = useAuth();
  
- 
+ const testApi = async () => {
+   try {
+    const {data} = axios.get("http://localhost:3006/order")
+    console.log("[HOME]", data)
+   } catch(e) {
+      console.log(e)
+   }
+ }
+
+ useEffect(() => {
+testApi()
+ }, [])
   
       return (
 
