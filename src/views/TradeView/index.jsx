@@ -134,7 +134,10 @@ if(
                             block
                             w-full'>
                             <HeaderTickerMiddleware
-                            tradeSymbol={tradeSymbol}/>
+                            tradeSymbolFirst={tradeSymbolFirst}
+                            tradeSymbolSecond={tradeSymbolSecond}
+                            tradeSymbol={tradeSymbol}
+                            />
                             </div>
                        
             

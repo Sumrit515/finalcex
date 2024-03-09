@@ -4,7 +4,9 @@ import HeaderTickerPersonal from './HeaderTickerPersonal'
 import HeaderTicker from './HeaderTicker'
 
 const HeaderTickerMiddleware = ({
-    tradeSymbol
+    tradeSymbol,
+    tradeSymbolFirst,
+    tradeSymbolSecond
 }) => {
 
     console.log('[HEADER_TICKER_MIDDLEWARE]', tradeSymbol)
@@ -31,10 +33,18 @@ const HeaderTickerMiddleware = ({
     }, [tradeSymbol])
 
     if(tickerType === "MNB")
-    return <HeaderTickerPersonal tradeSymbol={tradeSymbol}/>
+    return <HeaderTickerPersonal
+     tradeSymbol={tradeSymbol}
+     tradeSymbolFirst={tradeSymbolFirst}
+     tradeSymbolSecond={tradeSymbolSecond}
+     />
 
     if(tickerType === "binance") 
-    return <HeaderTicker tradeSymbol={tradeSymbol}/>
+    return <HeaderTicker 
+    tradeSymbol={tradeSymbol}
+    tradeSymbolFirst={tradeSymbolFirst}
+    tradeSymbolSecond={tradeSymbolSecond}
+    />
 
 
 }
